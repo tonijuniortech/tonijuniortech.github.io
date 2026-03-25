@@ -1,87 +1,1111 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Configuração de WhatsApp no iPhone</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificados iOS Brasil</title>
+  <meta name="description" content="Certificados iOS para instalação em iPhone, iPad e iPod. Pagamento via Pix, envio após registro do UDID e suporte dedicado." />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<style>
-body {
-  font-family: Arial, sans-serif;
-  background: #0f172a;
-  color: #fff;
-  margin: 0;
-  padding: 0;
-}
+    :root {
+      --bg: #0b1020;
+      --bg-soft: #111933;
+      --card: rgba(255, 255, 255, 0.06);
+      --card-border: rgba(255, 255, 255, 0.12);
+      --text: #ffffff;
+      --muted: #b9c2e0;
+      --primary: #7c3aed;
+      --primary-2: #2563eb;
+      --success: #22c55e;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      --radius: 18px;
+      --radius-sm: 12px;
+      --container: 1180px;
+    }
 
-.container {
-  max-width: 500px;
-  margin: auto;
-  padding: 20px;
-  text-align: center;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-h1 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(124, 58, 237, 0.18), transparent 30%),
+        radial-gradient(circle at top right, rgba(37, 99, 235, 0.18), transparent 30%),
+        linear-gradient(180deg, #090d19 0%, #0b1020 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-p {
-  color: #cbd5f5;
-  font-size: 16px;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-.box {
-  background: #1e293b;
-  padding: 15px;
-  border-radius: 10px;
-  margin-top: 20px;
-  line-height: 1.8;
-}
+    .container {
+      width: 100%;
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-.btn {
-  display: block;
-  margin-top: 20px;
-  padding: 15px;
-  background: #22c55e;
-  color: #000;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 8px;
-}
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(14px);
+      background: rgba(9, 13, 25, 0.75);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
 
-.btn:hover {
-  background: #16a34a;
-}
-</style>
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 76px;
+      gap: 20px;
+    }
 
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    .brand-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+      box-shadow: var(--shadow);
+      font-size: 20px;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .menu a {
+      color: var(--muted);
+      font-size: 15px;
+      transition: 0.2s ease;
+    }
+
+    .menu a:hover {
+      color: #fff;
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+      color: #fff;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .nav-cta:hover,
+    .btn:hover,
+    .btn-outline:hover,
+    .buy-btn:hover,
+    .faq-contact:hover {
+      transform: translateY(-1px);
+      opacity: 0.95;
+    }
+
+    .hero {
+      padding: 72px 0 48px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      color: #d7def8;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: 52px;
+      line-height: 1.06;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 700px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 26px;
+    }
+
+    .btn,
+    .btn-outline,
+    .buy-btn,
+    .faq-contact {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 14px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .btn,
+    .buy-btn,
+    .faq-contact {
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+      color: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.16);
+    }
+
+    .hero-points {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .hero-points span {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      color: #d7def8;
+      font-size: 14px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, rgba(124,58,237,0.18), rgba(37,99,235,0.1));
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .price-box {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 22px;
+      padding: 24px;
+      margin-top: 18px;
+    }
+
+    .price-label {
+      color: #d7def8;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .price {
+      font-size: 44px;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .small-muted {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .hero-list {
+      list-style: none;
+      margin-top: 18px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .hero-list li {
+      color: #eef2ff;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 12px 14px;
+      border-radius: 14px;
+      font-size: 15px;
+    }
+
+    section {
+      padding: 44px 0;
+    }
+
+    .section-title {
+      font-size: 34px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 26px;
+      font-size: 16px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, rgba(124,58,237,0.3), rgba(37,99,235,0.3));
+      font-size: 24px;
+      margin-bottom: 14px;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .card p,
+    .card li {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .steps {
+      counter-reset: step;
+    }
+
+    .step-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .step-card::before {
+      counter-increment: step;
+      content: "0" counter(step);
+      position: absolute;
+      top: 16px;
+      right: 18px;
+      font-size: 44px;
+      font-weight: 800;
+      color: rgba(255,255,255,0.06);
+    }
+
+    .compat-alert {
+      max-width: 860px;
+      margin: 0 auto 24px;
+      padding: 16px 18px;
+      border-radius: 16px;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.28);
+      color: #ffe8b3;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .compat-card strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .cert-info {
+      display: grid;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .cert-item {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 14px 16px;
+      border-radius: 14px;
+      color: #e8ecff;
+    }
+
+    .faq-wrap {
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      background: rgba(255,255,255,0.04);
+      margin-bottom: 14px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      background: transparent;
+      border: none;
+      color: #fff;
+      text-align: left;
+      padding: 18px 20px;
+      font-size: 17px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .faq-question span:last-child {
+      font-size: 24px;
+      line-height: 1;
+      color: #c9d3ff;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.28s ease;
+    }
+
+    .faq-answer-content {
+      padding: 0 20px 18px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 280px;
+    }
+
+    .faq-item.active .faq-question span:last-child {
+      transform: rotate(45deg);
+    }
+
+    .faq-footer {
+      text-align: center;
+      margin-top: 22px;
+    }
+
+    .faq-footer p {
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .cta-block {
+      background: linear-gradient(180deg, rgba(124,58,237,0.16), rgba(37,99,235,0.08));
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 24px;
+      padding: 28px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .cta-block h2 {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .cta-block p {
+      color: var(--muted);
+      max-width: 740px;
+      margin: 0 auto 20px;
+    }
+
+    footer {
+      padding: 34px 0 50px;
+      color: var(--muted);
+    }
+
+    .footer-box {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 24px;
+      text-align: center;
+    }
+
+    .footer-box p + p {
+      margin-top: 8px;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.72);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 2000;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal {
+      width: 100%;
+      max-width: 560px;
+      background: #0f172a;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .modal-header {
+      padding: 20px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .modal-header h3 {
+      font-size: 22px;
+    }
+
+    .close-btn {
+      background: transparent;
+      color: #fff;
+      font-size: 28px;
+      border: none;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .modal-body {
+      padding: 22px;
+    }
+
+    .modal-note,
+    .pix-note {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .form-input,
+    .form-textarea {
+      width: 100%;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #fff;
+      border-radius: 14px;
+      padding: 14px 14px;
+      outline: none;
+      font-size: 15px;
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder {
+      color: #9eacd8;
+    }
+
+    .pix-box {
+      margin: 16px 0;
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(34, 197, 94, 0.1);
+      border: 1px solid rgba(34, 197, 94, 0.24);
+    }
+
+    .pix-key {
+      display: block;
+      margin-top: 8px;
+      font-size: 16px;
+      font-weight: 700;
+      word-break: break-word;
+      color: #d8ffe3;
+    }
+
+    .copy-btn {
+      margin-top: 12px;
+      background: var(--success);
+      color: #04130a;
+      border: none;
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .modal-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .secondary-btn {
+      background: transparent;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.16);
+      padding: 14px 18px;
+      border-radius: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .buy-btn {
+      flex: 1;
+      min-width: 220px;
+    }
+
+    .udid-help {
+      margin-top: 10px;
+      color: #cfd8ff;
+      font-size: 13px;
+    }
+
+    .warning-text {
+      color: #ffdba8;
+      font-size: 13px;
+      margin-top: 12px;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .grid-4,
+      .grid-3,
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 38px;
+      }
+
+      .menu {
+        display: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding-top: 50px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
+
+      .price {
+        font-size: 36px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .modal-header h3 {
+        font-size: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="#inicio" class="brand">
+        <div class="brand-icon"></div>
+        <span>Certificados iOS Brasil</span>
+      </a>
 
-<div class="container">
+      <nav class="menu">
+        <a href="#inicio">Início</a>
+        <a href="#beneficios">Benefícios</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#compatibilidade">Compatibilidade</a>
+        <a href="#certificado">Certificado</a>
+        <a href="#faq">FAQ</a>
+      </nav>
 
-<h1>Configuração de WhatsApp no iPhone</h1>
+      <button class="nav-cta" onclick="openModal()">Comprar agora</button>
+    </div>
+  </header>
 
-<p>Serviço profissional para configurar seu WhatsApp no iPhone com segurança.</p>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div>
+          <div class="badge">✅ Certificado iOS para instalação em dispositivos Apple</div>
+          <h1>Certificado iOS para iPhone, iPad e iPod</h1>
+          <p>
+            Solução prática para ativação do certificado iOS com atendimento em português, pagamento via Pix e registro mediante envio do UDID.
+          </p>
 
-<div class="box">
-✔ Suporte completo<br>
-✔ Configuração rápida<br>
-✔ Funciona no iOS 15 ou superior<br>
-✔ Sem complicação<br>
-<strong>Comprar agora</strong>
-</div>
+          <div class="hero-actions">
+            <button class="btn" onclick="openModal()">Comprar por R$ 99,90</button>
+            <a class="btn-outline" href="#faq">Ver perguntas frequentes</a>
+          </div>
 
-<a class="btn" href="https://wa.me/5511992432053?text=Ol%C3%A1!%20Vi%20seu%20an%C3%BAncio%20no%20Google%20e%20quero%20instalar%20v%C3%A1rios%20WhatsApp%20no%20meu%20iPhone.%20Pode%20me%20ajudar%3F
-">
-Falar no WhatsApp
-</a>
+          <div class="hero-points">
+            <span>Prazo de entrega: 4 dias úteis</span>
+            <span>Uso garantido por 10 meses</span>
+            <span>Extensão possível para até 1 ano</span>
+          </div>
+        </div>
 
-<p style="margin-top:20px; font-size:12px;">
-Este serviço é independente e não possui vínculo com a Meta/WhatsApp.
-</p>
+        <div class="hero-card">
+          <h2 style="font-size:28px; margin-bottom:10px;">Ativação com suporte dedicado</h2>
+          <p class="small-muted">
+            Processo claro, objetivo e compatível apenas com dispositivos Apple suportados.
+          </p>
 
-</div>
+          <div class="price-box">
+            <div class="price-label">Valor único</div>
+            <div class="price">R$ 99,90</div>
+            <div class="small-muted">Pagamento via Pix</div>
+          </div>
 
+          <ul class="hero-list">
+            <li>✔ Registro após envio do UDID</li>
+            <li>✔ Compatível com iPhone, iPad e iPod</li>
+            <li>✔ Não compatível com Android</li>
+            <li>✔ Atendimento em português</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="beneficios">
+      <div class="container">
+        <h2 class="section-title">Benefícios do serviço</h2>
+        <p class="section-subtitle">
+          Estrutura objetiva, atendimento direto e processo adaptado para o mercado brasileiro.
+        </p>
+
+        <div class="grid-4">
+          <div class="card">
+            <div class="icon">📱</div>
+            <h3>Compatibilidade Total</h3>
+            <p>Compatível com iPhone, iPad e iPod Touch suportados. Serviço exclusivo para dispositivos Apple.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">📄</div>
+            <h3>Certificado de Uso</h3>
+            <p>Período garantido de 10 meses, com possibilidade de extensão para até 1 ano conforme disponibilidade.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">🤝</div>
+            <h3>Suporte Dedicado</h3>
+            <p>Atendimento em português para orientação durante o envio do UDID e confirmação do processo.</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">💠</div>
+            <h3>Pagamento Facilitado</h3>
+            <p>Pagamento por Pix com chave nacional e instruções claras para conclusão da compra.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-funciona">
+      <div class="container">
+        <h2 class="section-title">Como funciona</h2>
+        <p class="section-subtitle">
+          Processo simples, com etapas definidas para compra, envio de dados e entrega.
+        </p>
+
+        <div class="grid-4 steps">
+          <div class="card step-card">
+            <div class="icon">🛒</div>
+            <h3>Escolha e compra</h3>
+            <p>Clique em comprar, confirme o valor de R$ 99,90 e siga as instruções de pagamento via Pix.</p>
+          </div>
+
+          <div class="card step-card">
+            <div class="icon">🔑</div>
+            <h3>Envie o UDID</h3>
+            <p>Informe o UDID do seu dispositivo Apple no campo indicado para registrar corretamente o certificado.</p>
+          </div>
+
+          <div class="card step-card">
+            <div class="icon">🧾</div>
+            <h3>Confirmação</h3>
+            <p>Após o pagamento e envio dos dados, o pedido entra em processamento para validação.</p>
+          </div>
+
+          <div class="card step-card">
+            <div class="icon">⏳</div>
+            <h3>Entrega</h3>
+            <p>Prazo estimado de até 4 dias úteis após o registro correto do UDID e confirmação do pagamento.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="compatibilidade">
+      <div class="container">
+        <h2 class="section-title">Compatibilidade exclusiva</h2>
+        <p class="section-subtitle">
+          O serviço funciona apenas com dispositivos Apple compatíveis.
+        </p>
+
+        <div class="compat-alert">
+          Atenção: este serviço NÃO é compatível com Android.
+        </div>
+
+        <div class="grid-3">
+          <div class="card compat-card">
+            <div class="icon">📱</div>
+            <strong>iPhone</strong>
+            <p>Compatível com modelos suportados de iPhone mediante envio correto do UDID.</p>
+          </div>
+
+          <div class="card compat-card">
+            <div class="icon">📲</div>
+            <strong>iPad</strong>
+            <p>Compatível com iPads suportados dentro da estrutura do certificado e do registro informado.</p>
+          </div>
+
+          <div class="card compat-card">
+            <div class="icon">🎵</div>
+            <strong>iPod Touch</strong>
+            <p>Compatível com iPod Touch suportado, desde que o dispositivo permita o processo de identificação.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certificado">
+      <div class="container">
+        <h2 class="section-title">Informações do certificado</h2>
+        <p class="section-subtitle">
+          Dados objetivos sobre prazo, duração e condições gerais do serviço.
+        </p>
+
+        <div class="grid-2">
+          <div class="card">
+            <div class="icon">📆</div>
+            <h3>Duração garantida</h3>
+            <div class="cert-info">
+              <div class="cert-item">✔ Uso garantido por 10 meses</div>
+              <div class="cert-item">✔ Possibilidade de extensão para até 1 ano</div>
+              <div class="cert-item">✔ Ativação vinculada ao UDID informado</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="icon">🚚</div>
+            <h3>Prazo e entrega</h3>
+            <div class="cert-info">
+              <div class="cert-item">✔ Prazo de até 4 dias úteis após o registro</div>
+              <div class="cert-item">✔ Confirmação após pagamento via Pix</div>
+              <div class="cert-item">✔ Atendimento em português para orientações</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <h2 class="section-title">Perguntas frequentes</h2>
+        <p class="section-subtitle">
+          Respostas objetivas para as dúvidas mais comuns antes da compra.
+        </p>
+
+        <div class="faq-wrap">
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>1. Em quais dispositivos o serviço funciona?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                O serviço funciona apenas com dispositivos Apple compatíveis, como iPhone, iPad e iPod Touch. Não funciona em Android.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>2. O que é UDID?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                UDID é o identificador único do seu dispositivo Apple. Ele é necessário para registrar corretamente o certificado no aparelho informado.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>3. Qual é o prazo de entrega?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                O prazo é de até 4 dias úteis após o envio correto do UDID e a confirmação do pagamento.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>4. Quanto tempo dura o certificado?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                O período garantido é de 10 meses, com possibilidade de extensão para até 1 ano, conforme disponibilidade do serviço.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>5. Como é feito o pagamento?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                O pagamento é feito via Pix. Ao clicar em comprar, você verá a chave Pix e as instruções para concluir o pedido.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>6. Posso comprar sem enviar o UDID?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                Não. O UDID é necessário para o registro correto do certificado no dispositivo. Sem ele, o processo não pode ser concluído.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>7. Funciona em qualquer versão do iOS?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                A compatibilidade depende do dispositivo e da estrutura disponível no momento do registro. Em caso de dúvida, envie o modelo do aparelho antes da compra.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>8. Como tirar dúvidas antes de comprar?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                Você pode usar o botão de contato para falar diretamente e confirmar as informações do seu aparelho antes de efetuar o pagamento.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-footer">
+            <p>Ainda tem dúvidas? Fale direto para confirmar as informações antes da compra.</p>
+            <a class="faq-contact" href="https://wa.me/5511992432053?text=Ol%C3%A1%2C%20tenho%20d%C3%BAvidas%20sobre%20o%20certificado%20iOS%20e%20quero%20mais%20informa%C3%A7%C3%B5es." target="_blank">Falar no WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="cta-block">
+          <h2>Pronto para solicitar seu certificado iOS?</h2>
+          <p>
+            Faça o pagamento via Pix, envie seu UDID e siga o processo com suporte em português para conclusão do pedido.
+          </p>
+          <button class="btn" onclick="openModal()">Comprar agora por R$ 99,90</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-box">
+      <p><strong>Certificados iOS Brasil</strong></p>
+      <p>Atendimento em português • Pagamento via Pix • Compatível com dispositivos Apple suportados</p>
+      <p>© 2026 Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="paymentModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Pagamento via Pix</h3>
+        <button class="close-btn" onclick="closeModal()" aria-label="Fechar">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <p class="modal-note">
+          Preencha os dados abaixo, copie a chave Pix e depois envie o comprovante no WhatsApp.
+        </p>
+
+        <div class="form-group" style="margin-top: 18px;">
+          <label class="form-label" for="udid">UDID do dispositivo</label>
+          <textarea id="udid" class="form-textarea" rows="4" placeholder="Cole aqui o UDID do seu iPhone, iPad ou iPod"></textarea>
+          <div class="udid-help">Informe o UDID corretamente para evitar atraso no registro.</div>
+        </div>
+
+        <div class="pix-box">
+          <div><strong>Valor:</strong> R$ 99,90</div>
+          <div style="margin-top: 8px;"><strong>Chave Pix:</strong></div>
+          <span class="pix-key" id="pixKey">certificados.ios.brasil@gmail.com</span>
+          <button class="copy-btn" type="button" onclick="copyPix()">Copiar chave Pix</button>
+        </div>
+
+        <p class="pix-note">
+          Após o pagamento, envie o comprovante junto com o UDID informado para confirmação do pedido.
+        </p>
+
+        <p class="warning-text">
+          Atenção: o serviço é exclusivo para dispositivos Apple compatíveis. Não funciona em Android.
+        </p>
+
+        <div class="modal-actions">
+          <button class="buy-btn" type="button" onclick="sendToWhatsApp()">Enviar UDID e falar no WhatsApp</button>
+          <button class="secondary-btn" type="button" onclick="closeModal()">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach((item) => {
+      const button = item.querySelector('.faq-question');
+      button.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+
+        faqItems.forEach((faq) => faq.classList.remove('active'));
+
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+
+    function openModal() {
+      document.getElementById('paymentModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('paymentModal').classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    function copyPix() {
+      const pixKey = document.getElementById('pixKey').innerText;
+      navigator.clipboard.writeText(pixKey).then(() => {
+        alert('Chave Pix copiada com sucesso.');
+      }).catch(() => {
+        alert('Não foi possível copiar automaticamente. Copie manualmente: ' + pixKey);
+      });
+    }
+
+    function sendToWhatsApp() {
+      const udid = document.getElementById('udid').value.trim();
+      const pixKey = document.getElementById('pixKey').innerText;
+
+      const message = 
+        "Olá, quero comprar o certificado iOS.%0A%0A" +
+        "UDID informado:%0A" + (udid ? encodeURIComponent(udid) : encodeURIComponent("Ainda não informado")) + "%0A%0A" +
+        "Já vi a chave Pix: " + encodeURIComponent(pixKey) + "%0A" +
+        "Valor: R$ 99,90";
+
+      window.open("https://wa.me/5511992432053?text=" + message, "_blank");
+    }
+
+    window.addEventListener('click', function (event) {
+      const modal = document.getElementById('paymentModal');
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+  </script>
 </body>
 </html>
