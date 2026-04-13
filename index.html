@@ -1,1410 +1,257 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Certificados iToni</title>
-
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1819143807433209"
-     crossorigin="anonymous"></script>
-  
-  <meta name="description" content="Certificados iToni para instalação em dispositivos Apple. Atendimento em português, suporte direto e envio de UDID." />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    :root {
-      --bg-1: #040814;
-      --bg-2: #081126;
-      --glass: rgba(255, 255, 255, 0.08);
-      --glass-strong: rgba(255, 255, 255, 0.12);
-      --glass-border: rgba(255, 255, 255, 0.18);
-      --text: #ffffff;
-      --muted: #c8d3f3;
-      --primary: #6d4aff;
-      --primary-2: #2d6bff;
-      --success: #22c55e;
-      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
-      --radius: 22px;
-      --radius-sm: 16px;
-      --container: 1180px;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at 15% 20%, rgba(124, 58, 237, 0.28), transparent 24%),
-        radial-gradient(circle at 85% 10%, rgba(37, 99, 235, 0.22), transparent 26%),
-        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.06), transparent 18%),
-        linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 100%);
-      min-height: 100vh;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      background:
-        linear-gradient(135deg, rgba(255,255,255,0.05), transparent 20%, transparent 80%, rgba(255,255,255,0.03)),
-        radial-gradient(circle at 30% 30%, rgba(255,255,255,0.06), transparent 20%);
-      mix-blend-mode: screen;
-      opacity: 0.7;
-      z-index: 0;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .container {
-      width: 100%;
-      max-width: var(--container);
-      margin: 0 auto;
-      padding: 0 20px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .glass {
-      background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.05));
-      border: 1px solid var(--glass-border);
-      backdrop-filter: blur(22px) saturate(160%);
-      -webkit-backdrop-filter: blur(22px) saturate(160%);
-      box-shadow: var(--shadow);
-    }
-
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(4, 8, 20, 0.45);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(22px) saturate(160%);
-      -webkit-backdrop-filter: blur(22px) saturate(160%);
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      min-height: 76px;
-      gap: 20px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 700;
-      font-size: 20px;
-    }
-
-    .brand-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, rgba(109,74,255,0.95), rgba(45,107,255,0.95));
-      border: 1px solid rgba(255,255,255,0.18);
-      box-shadow: 0 10px 30px rgba(45,107,255,0.35);
-      font-size: 20px;
-    }
-
-    .menu {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-      flex-wrap: wrap;
-      margin-left: auto;
-    }
-
-    .menu a {
-      color: var(--muted);
-      font-size: 15px;
-      transition: 0.2s ease;
-    }
-
-    .menu a:hover {
-      color: #fff;
-    }
-
-    .btn,
-    .btn-outline,
-    .faq-contact {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border: none;
-      cursor: pointer;
-      transition: 0.25s ease;
-      font-weight: 700;
-    }
-
-    .btn,
-    .faq-contact {
-      padding: 13px 22px;
-      border-radius: 999px;
-      color: #fff;
-      background: linear-gradient(135deg, rgba(109,74,255,0.92), rgba(45,107,255,0.92));
-      border: 1px solid rgba(255,255,255,0.16);
-      box-shadow: 0 12px 28px rgba(45,107,255,0.28);
-    }
-
-    .btn-outline {
-      background: rgba(255,255,255,0.05);
-      color: #fff;
-      border: 1px solid rgba(255,255,255,0.16);
-      border-radius: 14px;
-      padding: 14px 22px;
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-    }
-
-    .btn:hover,
-    .btn-outline:hover,
-    .faq-contact:hover {
-      transform: translateY(-1px);
-      opacity: 0.96;
-    }
-
-    .hero {
-      padding: 72px 0 48px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 34px;
-      align-items: center;
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.14);
-      color: #dbe5ff;
-      font-size: 14px;
-      margin-bottom: 18px;
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-    }
-
-    h1 {
-      font-size: 58px;
-      line-height: 1.05;
-      margin-bottom: 16px;
-      letter-spacing: -1.4px;
-    }
-
-    .hero p {
-      color: var(--muted);
-      font-size: 18px;
-      max-width: 700px;
-      margin-bottom: 28px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      max-width: 430px;
-      margin-bottom: 26px;
-    }
-
-    .hero-actions .btn,
-    .hero-actions .btn-outline {
-      width: 100%;
-      min-height: 62px;
-      padding: 16px 22px;
-      justify-content: center;
-      gap: 12px;
-      font-size: 1.05rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      border-radius: 20px;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-    }
-
-    .hero-actions .btn {
-      background: linear-gradient(135deg, #6d4dff 0%, #3b82f6 100%);
-      border: 1px solid rgba(255,255,255,0.18);
-      box-shadow:
-        0 12px 30px rgba(59,130,246,0.28),
-        inset 0 1px 0 rgba(255,255,255,0.14);
-    }
-
-    .hero-actions .btn:hover {
-      transform: translateY(-2px);
-      box-shadow:
-        0 18px 36px rgba(59,130,246,0.36),
-        inset 0 1px 0 rgba(255,255,255,0.18);
-    }
-
-    .hero-actions .btn-outline {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.14);
-      box-shadow:
-        0 8px 24px rgba(0,0,0,0.18),
-        inset 0 1px 0 rgba(255,255,255,0.06);
-    }
-
-    .hero-actions .btn-outline:hover {
-      transform: translateY(-2px);
-      background: rgba(255,255,255,0.09);
-      border-color: rgba(255,255,255,0.20);
-    }
-
-    .hero-btn-icon {
-      font-size: 1.15rem;
-      line-height: 1;
-      flex-shrink: 0;
-    }
-
-    .hero-points {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
-      max-width: 430px;
-    }
-
-    .hero-points span {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 16px 18px;
-      border-radius: 18px;
-      background: rgba(255,255,255,0.06);
-      color: #ffffff;
-      font-size: 15px;
-      border: 1px solid rgba(255,255,255,0.12);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      box-shadow:
-        0 8px 24px rgba(0,0,0,0.14),
-        inset 0 1px 0 rgba(255,255,255,0.06);
-    }
-
-    .hero-point-icon {
-      width: 42px;
-      height: 42px;
-      min-width: 42px;
-      border-radius: 14px;
-      display: grid;
-      place-items: center;
-      font-size: 18px;
-      background: linear-gradient(135deg, rgba(109,74,255,0.35), rgba(45,107,255,0.28));
-      border: 1px solid rgba(255,255,255,0.10);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
-    }
-
-    .hero-point-text {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-      line-height: 1.35;
-    }
-
-    .hero-point-text strong {
-      font-size: 15px;
-      color: #ffffff;
-    }
-
-    .hero-point-text small {
-      font-size: 13px;
-      color: rgba(255,255,255,0.66);
-      font-weight: 400;
-    }
-
-    .hero-card {
-      border-radius: 30px;
-      padding: 30px;
-    }
-
-    .hero-list {
-      list-style: none;
-      margin-top: 18px;
-      display: grid;
-      gap: 12px;
-    }
-
-    .hero-list li {
-      color: #eef2ff;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.09);
-      padding: 13px 15px;
-      border-radius: 16px;
-      font-size: 15px;
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-    }
-
-    section {
-      padding: 44px 0;
-    }
-
-    .section-title {
-      font-size: 38px;
-      margin-bottom: 10px;
-      text-align: center;
-      letter-spacing: -0.8px;
-    }
-
-    .section-subtitle {
-      color: var(--muted);
-      text-align: center;
-      max-width: 760px;
-      margin: 0 auto 26px;
-      font-size: 16px;
-    }
-
-    .grid-4 {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .card {
-      border-radius: var(--radius);
-      padding: 22px;
-    }
-
-    .card.glass {
-      background: linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.05));
-    }
-
-    .icon {
-      width: 56px;
-      height: 56px;
-      border-radius: 18px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, rgba(109,74,255,0.45), rgba(45,107,255,0.35));
-      border: 1px solid rgba(255,255,255,0.14);
-      font-size: 24px;
-      margin-bottom: 14px;
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-    }
-
-    .card h3 {
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .steps {
-      counter-reset: step;
-    }
-
-    .step-card {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .step-card::before {
-      counter-increment: step;
-      content: "0" counter(step);
-      position: absolute;
-      top: 16px;
-      right: 18px;
-      font-size: 44px;
-      font-weight: 800;
-      color: rgba(255,255,255,0.07);
-    }
-
-    .compat-alert {
-      max-width: 860px;
-      margin: 0 auto 24px;
-      padding: 16px 18px;
-      border-radius: 16px;
-      background: rgba(245, 158, 11, 0.10);
-      border: 1px solid rgba(245, 158, 11, 0.24);
-      color: #ffe8b3;
-      text-align: center;
-      font-weight: 700;
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-    }
-
-    .compat-card strong {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 18px;
-    }
-
-    .faq-wrap {
-      max-width: 920px;
-      margin: 0 auto;
-    }
-
-    .faq-item {
-      border-radius: 18px;
-      margin-bottom: 14px;
-      overflow: hidden;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.12);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      box-shadow: var(--shadow);
-    }
-
-    .faq-question {
-      width: 100%;
-      background: transparent;
-      border: none;
-      color: #fff;
-      text-align: left;
-      padding: 18px 20px;
-      font-size: 17px;
-      font-weight: 700;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-
-    .faq-question span:last-child {
-      font-size: 24px;
-      line-height: 1;
-      color: #c9d3ff;
-      transition: transform 0.2s ease;
-      flex-shrink: 0;
-    }
-
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.32s ease;
-    }
-
-    .faq-answer-content {
-      padding: 0 20px 18px;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .faq-answer-content strong {
-      color: #ffffff;
-    }
-
-    .faq-answer-content ul {
-      margin: 12px 0 0 18px;
-    }
-
-    .faq-answer-content li {
-      margin-bottom: 6px;
-      word-break: break-word;
-    }
-
-    .faq-item.active .faq-question span:last-child {
-      transform: rotate(45deg);
-    }
-
-    .faq-footer {
-      text-align: center;
-      margin-top: 22px;
-    }
-
-    .faq-footer p {
-      color: var(--muted);
-      margin-bottom: 14px;
-    }
-
-    .cta-block {
-      border-radius: 28px;
-      padding: 34px 28px;
-      text-align: center;
-    }
-
-    .cta-block h2 {
-      font-size: 32px;
-      margin-bottom: 12px;
-    }
-
-    .cta-block p {
-      color: var(--muted);
-      max-width: 740px;
-      margin: 0 auto 20px;
-    }
-
-    footer {
-      padding: 34px 0 50px;
-      color: var(--muted);
-    }
-
-    .footer-box {
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding-top: 24px;
-      text-align: center;
-    }
-
-    .footer-box p + p {
-      margin-top: 8px;
-    }
-
-    /* DEPOIMENTOS */
-    .testimonial-highlight {
-      text-align: center;
-      margin-bottom: 24px;
-      font-size: 18px;
-      font-weight: 700;
-      color: #ffffff;
-    }
-
-    .testimonial-carousel-wrap {
-      position: relative;
-      padding: 0 56px;
-    }
-
-    .testimonial-carousel {
-      display: flex;
-      gap: 16px;
-      overflow-x: auto;
-      scroll-behavior: smooth;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-      padding: 8px 0 14px;
-      user-select: none;
-      cursor: grab;
-    }
-
-    .testimonial-carousel::-webkit-scrollbar {
-      display: none;
-    }
-
-    .testimonial-carousel.dragging {
-      scroll-behavior: auto;
-      cursor: grabbing;
-    }
-
-    .testimonial-card {
-      min-width: 170px;
-      max-width: 170px;
-      flex: 0 0 170px;
-      scroll-snap-align: start;
-      border-radius: 22px;
-      padding: 8px;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    .testimonial-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
-    }
-
-    .testimonial-card img {
-      width: 100%;
-      height: 340px;
-      border-radius: 16px;
-      object-fit: cover;
-      object-position: top;
-      pointer-events: none;
-    }
-
-    .carousel-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 3;
-      width: 42px;
-      height: 42px;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      color: #ffffff;
-      font-size: 28px;
-      line-height: 1;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.16);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      transition: 0.25s ease;
-    }
-
-    .carousel-btn:hover {
-      background: rgba(255,255,255,0.14);
-      transform: translateY(-50%) scale(1.05);
-    }
-
-    .carousel-btn.prev {
-      left: 0;
-    }
-
-    .carousel-btn.next {
-      right: 0;
-    }
-
-    .testimonial-note {
-      text-align: center;
-      color: var(--muted);
-      font-size: 14px;
-      margin-top: 10px;
-    }
-
-    @media (max-width: 980px) {
-      .hero-grid,
-      .grid-4,
-      .grid-3 {
-        grid-template-columns: 1fr;
-      }
-
-      h1 {
-        font-size: 40px;
-      }
-
-      .menu {
-        display: none;
-      }
-
-      .testimonial-carousel-wrap {
-        padding: 0 46px;
-      }
-
-      .testimonial-card {
-        min-width: 155px;
-        max-width: 155px;
-        flex-basis: 155px;
-      }
-
-      .testimonial-card img {
-        height: 305px;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .hero {
-        padding-top: 50px;
-      }
-
-      h1 {
-        font-size: 32px;
-      }
-
-      .section-title {
-        font-size: 28px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      .hero-actions .btn,
-      .hero-actions .btn-outline {
-        min-height: 58px;
-        font-size: 0.98rem;
-        border-radius: 18px;
-      }
-
-      .hero-points span {
-        padding: 15px 16px;
-        border-radius: 16px;
-      }
-
-      .hero-point-icon {
-        width: 40px;
-        height: 40px;
-        min-width: 40px;
-        border-radius: 12px;
-      }
-
-      .hero-point-text strong {
-        font-size: 14px;
-      }
-
-      .hero-point-text small {
-        font-size: 12px;
-      }
-
-      .testimonial-carousel-wrap {
-        padding: 0 38px;
-      }
-
-      .testimonial-highlight {
-        font-size: 16px;
-      }
-
-      .testimonial-card {
-        min-width: 138px;
-        max-width: 138px;
-        flex-basis: 138px;
-        padding: 6px;
-        border-radius: 18px;
-      }
-
-      .testimonial-card img {
-        height: 272px;
-        border-radius: 14px;
-      }
-
-      .carousel-btn {
-        width: 36px;
-        height: 36px;
-        font-size: 24px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Certificados iToni</title>
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+--bg:#0b0f1a;
+--card:rgba(255,255,255,0.05);
+--text:#fff;
+--muted:#9aa4c7;
+--primary:#6d4aff;
+--border:rgba(255,255,255,0.1);
+}
+
+body.light{
+--bg:#f5f7fb;
+--card:#ffffff;
+--text:#0b0f1a;
+--muted:#5c647f;
+--border:rgba(0,0,0,0.1);
+}
+
+body{
+font-family:-apple-system;
+background:var(--bg);
+color:var(--text);
+transition:.3s;
+}
+
+/* NAVBAR */
+.nav{
+display:flex;
+justify-content:space-between;
+padding:15px 20px;
+position:sticky;
+top:0;
+backdrop-filter:blur(12px);
+background:rgba(0,0,0,.3);
+z-index:1000;
+}
+
+.logo{font-weight:700}
+
+.menu{
+display:flex;
+gap:20px;
+}
+
+.menu a{color:var(--text);text-decoration:none}
+
+/* HAMBURGER */
+.hamburger{
+display:none;
+flex-direction:column;
+gap:5px;
+cursor:pointer;
+}
+
+.hamburger span{
+width:25px;
+height:3px;
+background:var(--text);
+}
+
+.mobile{
+display:none;
+flex-direction:column;
+padding:15px;
+}
+
+.mobile.active{display:flex}
+
+/* BUTTONS */
+.btn{
+background:linear-gradient(135deg,#6d4aff,#3b82f6);
+color:#fff;
+padding:10px 15px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+/* HERO */
+.hero{
+text-align:center;
+padding:60px 20px;
+}
+
+.hero h1{
+font-size:32px;
+margin-bottom:10px;
+}
+
+/* MODAL */
+.modal{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.7);
+justify-content:center;
+align-items:center;
+}
+
+.modal.active{display:flex}
+
+.modal-box{
+background:var(--card);
+padding:25px;
+border-radius:12px;
+width:300px;
+position:relative;
+}
+
+.close{
+position:absolute;
+right:10px;
+top:10px;
+cursor:pointer;
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+.menu{display:none}
+.hamburger{display:flex}
+}
+</style>
 </head>
+
 <body>
-  <header class="topbar">
-    <div class="container nav">
-      <a href="#inicio" class="brand">
-        <div class="brand-icon"></div>
-        <span>Certificados iToni</span>
-      </a>
 
-      <nav class="menu">
-        <a href="#inicio">Início</a>
-        <a href="#beneficios">Benefícios</a>
-        <a href="#depoimentos">Depoimentos</a>
-        <a href="#como-funciona">Como funciona</a>
-        <a href="#compatibilidade">Compatibilidade</a>
-        <a href="#faq">FAQ</a>
-        <a href="#revogacao">Revogação</a>
-      </nav>
-    </div>
-  </header>
+<!-- NAV -->
+<div class="nav">
+<div class="logo">🍎 iToni</div>
+
+<div class="menu">
+<a href="#">Início</a>
+<button class="btn" id="loginBtn">Login</button>
+<button class="btn" id="logoutBtn" style="display:none">Sair</button>
+<button class="btn" id="themeBtn">🌙</button>
+</div>
+
+<div class="hamburger" id="hamburger">
+<span></span><span></span><span></span>
+</div>
+</div>
+
+<div class="mobile" id="mobileMenu">
+<button class="btn" id="loginBtnM">Login</button>
+<button class="btn" id="logoutBtnM" style="display:none">Sair</button>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+<h1>Certificados iOS</h1>
+<p>Login real + sistema profissional</p>
+</div>
+
+<!-- LOGIN MODAL -->
+<div class="modal" id="modal">
+<div class="modal-box">
+<div class="close" id="close">✖</div>
+
+<h3>Login</h3>
+
+<input id="email" placeholder="Email" style="width:100%;margin:10px 0;padding:8px">
+<input id="pass" type="password" placeholder="Senha" style="width:100%;margin:10px 0;padding:8px">
+
+<button class="btn" id="loginEmail">Entrar</button>
+<button class="btn" id="loginGoogle" style="margin-top:10px;background:#ea4335">Google</button>
+
+</div>
+</div>
+
+<script>
+
+/* 🔥 CONFIG FIREBASE */
+const firebaseConfig = {
+apiKey: "AIzaSyCxHuPz2P0JR8rKOiY1yE_ZkOssnM_iK8E",
+authDomain: "tonijuniortech.firebaseapp.com"
+};
+
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+
+/* LOGIN */
+document.getElementById("loginEmail").onclick = ()=>{
+const email = email.value;
+const pass = document.getElementById("pass").value;
+
+auth.signInWithEmailAndPassword(email,pass)
+.then(()=>modal.classList.remove("active"))
+.catch(()=>alert("Erro login"));
+};
+
+/* GOOGLE */
+document.getElementById("loginGoogle").onclick = ()=>{
+const provider = new firebase.auth.GoogleAuthProvider();
+auth.signInWithPopup(provider);
+};
+
+/* LOGOUT */
+logoutBtn.onclick = ()=>auth.signOut();
+logoutBtnM.onclick = ()=>auth.signOut();
+
+/* UI AUTH */
+auth.onAuthStateChanged(user=>{
+if(user){
+loginBtn.style.display="none";
+logoutBtn.style.display="block";
+loginBtnM.style.display="none";
+logoutBtnM.style.display="block";
+}else{
+loginBtn.style.display="block";
+logoutBtn.style.display="none";
+loginBtnM.style.display="block";
+logoutBtnM.style.display="none";
+}
+});
+
+/* MODAL */
+loginBtn.onclick=()=>modal.classList.add("active");
+loginBtnM.onclick=()=>modal.classList.add("active");
+close.onclick=()=>modal.classList.remove("active");
+
+/* HAMBURGER */
+hamburger.onclick=()=>{
+mobileMenu.classList.toggle("active");
+};
+
+/* DARK MODE */
+const themeBtn = document.getElementById("themeBtn");
+
+if(localStorage.getItem("theme")==="light"){
+document.body.classList.add("light");
+themeBtn.textContent="☀️";
+}
+
+themeBtn.onclick=()=>{
+document.body.classList.toggle("light");
+const isLight=document.body.classList.contains("light");
+localStorage.setItem("theme", isLight?"light":"dark");
+themeBtn.textContent=isLight?"☀️":"🌙";
+};
+
+</script>
 
-  <main>
-    <section class="hero" id="inicio">
-      <div class="container hero-grid">
-        <div>
-          <div class="badge">✅ Certificado iOS para instalação em dispositivos Apple</div>
-          <h1>Certificado iOS para iPhone, iPad e iPod</h1>
-          <p>
-            Solução prática para ativação do certificado iOS com atendimento em português, pagamento via Pix e registro mediante envio do UDID.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn" href="https://wa.me/5511992432053?text=vim%20do%20site%2C%20regras%20e%20pre%C3%A7o" target="_blank">
-              <span class="hero-btn-icon">💬</span>
-              <span>Contato suporte</span>
-            </a>
-
-            <a class="btn-outline" href="#faq">
-              <span class="hero-btn-icon">❓</span>
-              <span>Ver perguntas frequentes</span>
-            </a>
-          </div>
-
-          <div class="hero-points">
-            <span>
-              <div class="hero-point-icon">📱</div>
-              <div class="hero-point-text">
-                <strong>Compatível com iPhone, iPad e iPod</strong>
-                <small>Suporte para dispositivos Apple compatíveis</small>
-              </div>
-            </span>
-
-            <span>
-              <div class="hero-point-icon">✅</div>
-              <div class="hero-point-text">
-                <strong>Funciona no iOS 15 ou superior</strong>
-                <small>Compatível com versões suportadas do sistema</small>
-              </div>
-            </span>
-          </div>
-        </div>
-
-        <div class="hero-card glass">
-          <h2 style="font-size:28px; margin-bottom:10px;">Ativação com suporte dedicado</h2>
-          <p style="color: var(--muted); font-size: 16px;">
-            Processo claro, objetivo e compatível apenas com dispositivos Apple.
-          </p>
-
-          <ul class="hero-list">
-            <li>✔ Registro após envio do UDID</li>
-            <li>✔ Compatível com iPhone, iPad e iPod</li>
-            <li>✔ Não compatível com Android</li>
-            <li>✔ Atendimento em português</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="beneficios">
-      <div class="container">
-        <h2 class="section-title">Benefícios do serviço</h2>
-        <p class="section-subtitle">
-          Estrutura objetiva, atendimento direto e processo adaptado para o mercado brasileiro.
-        </p>
-
-        <div class="grid-4">
-          <div class="card glass">
-            <div class="icon">📱</div>
-            <h3>Compatibilidade Total</h3>
-            <p>Compatível com iPhone, iPad e iPod Touch suportados. Serviço exclusivo para dispositivos Apple.</p>
-          </div>
-
-          <div class="card glass">
-            <div class="icon">📄</div>
-            <h3>Certificado de Uso</h3>
-            <p>Instale muitos aplicativos no seu dispositivo.</p>
-          </div>
-
-          <div class="card glass">
-            <div class="icon">🤝</div>
-            <h3>Suporte Dedicado</h3>
-            <p>Atendimento em português para orientação durante o envio do UDID e confirmação do processo.</p>
-          </div>
-
-          <div class="card glass">
-            <div class="icon">💠</div>
-            <h3>Pagamento Facilitado</h3>
-            <p>Pagamento por Pix com chave nacional e instruções claras para conclusão do contato.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="depoimentos">
-      <div class="container">
-        <h2 class="section-title">Clientes satisfeitos</h2>
-        <p class="section-subtitle">
-          Veja alguns relatos enviados por clientes após a conclusão do processo.
-        </p>
-
-        <div class="testimonial-highlight">
-          ⭐ +8k de clientes satisfeitos
-        </div>
-
-        <div class="testimonial-carousel-wrap">
-          <button class="carousel-btn prev" type="button" aria-label="Ver depoimentos anteriores">‹</button>
-
-          <div class="testimonial-carousel" id="testimonialCarousel">
-            <a href="img/dep1.jpg" target="_blank" class="testimonial-card glass">
-              <img src="img/dep1.png" alt="Depoimento de cliente 1">
-            </a>
-            <a href="img/dep2.jpg" target="_blank" class="testimonial-card glass">
-              <img src="img/dep2.png" alt="Depoimento de cliente 2">
-            </a>
-            <a href="img/dep3.jpg" target="_blank" class="testimonial-card glass">
-              <img src="img/dep3.png" alt="Depoimento de cliente 3">
-            </a>
-            <a href="img/dep4.jpg" target="_blank" class="testimonial-card glass">
-              <img src="img/dep4.png" alt="Depoimento de cliente 4">
-            </a>
-            <a href="img/dep5.jpg" target="_blank" class="testimonial-card glass">
-              <img src="img/dep5.png" alt="Depoimento de cliente 5">
-            </a>
-            <a href="img/dep6.jpg" target="_blank" class="testimonial-card glass">
-              <img src="img/dep6.png" alt="Depoimento de cliente 6">
-            </a>
-          </div>
-
-          <button class="carousel-btn next" type="button" aria-label="Ver próximos depoimentos">›</button>
-        </div>
-
-        <p class="testimonial-note">
-          Arraste com o dedo, deslize ou use as setas.
-        </p>
-      </div>
-    </section>
-
-    <section id="como-funciona">
-      <div class="container">
-        <h2 class="section-title">Como funciona</h2>
-        <p class="section-subtitle">
-          Processo simples, com etapas definidas para contato, envio de dados e liberação.
-        </p>
-
-        <div class="grid-4 steps">
-          <div class="card glass step-card">
-            <div class="icon">🛒</div>
-            <h3>Após a compra</h3>
-            <p>Entre em contato para saber mais sobre os valores.</p>
-          </div>
-
-          <div class="card glass step-card">
-            <div class="icon">🔑</div>
-            <h3>Envie o UDID</h3>
-            <p>Informe o UDID do seu dispositivo Apple no campo indicado para registrar corretamente o certificado.</p>
-          </div>
-
-          <div class="card glass step-card">
-            <div class="icon">🧾</div>
-            <h3>Confirmação</h3>
-            <p>Após o pagamento e envio dos dados, o pedido entra em processamento para validação.</p>
-          </div>
-
-          <div class="card glass step-card">
-            <div class="icon">⏳</div>
-            <h3>Entrega</h3>
-            <p>Após o pagamento e envio do UDID, aguarde instruções para entrega.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="compatibilidade">
-      <div class="container">
-        <h2 class="section-title">Compatibilidade exclusiva</h2>
-        <p class="section-subtitle">
-          O serviço funciona apenas com dispositivos Apple compatíveis.
-        </p>
-
-        <div class="compat-alert">
-          Atenção: este serviço NÃO é compatível com Android.
-        </div>
-
-        <div class="grid-3">
-          <div class="card glass compat-card">
-            <div class="icon">📱</div>
-            <strong>iPhone</strong>
-            <p>Compatível com modelos suportados de iPhone mediante envio correto do UDID.</p>
-          </div>
-
-          <div class="card glass compat-card">
-            <div class="icon">📲</div>
-            <strong>iPad</strong>
-            <p>Compatível com iPads suportados dentro da estrutura do certificado e do registro informado.</p>
-          </div>
-
-          <div class="card glass compat-card">
-            <div class="icon">🎵</div>
-            <strong>iPod Touch</strong>
-            <p>Compatível com iPod Touch suportado, desde que o dispositivo permita o processo de identificação.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq">
-      <div class="container">
-        <h2 class="section-title">Perguntas frequentes</h2>
-        <p class="section-subtitle">
-          Respostas objetivas para as dúvidas mais comuns antes do contato.
-        </p>
-
-        <div class="faq-wrap">
-          <div class="faq-item">
-            <button class="faq-question" type="button">
-              <span>1. Em quais dispositivos o serviço funciona?</span>
-              <span>+</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-content">
-                O serviço funciona apenas com dispositivos Apple compatíveis, como iPhone, iPad e iPod Touch. Não funciona em Android.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" type="button">
-              <span>2. O que é UDID?</span>
-              <span>+</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-content">
-                UDID é o identificador único do seu dispositivo Apple. Ele é necessário para registrar corretamente o certificado no aparelho informado.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" type="button">
-              <span>3. Qual é o prazo de entrega?</span>
-              <span>+</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-content">
-                Entre em contato para saber sobre os prazos de entrega.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" type="button">
-              <span>4. Quanto tempo dura o certificado?</span>
-              <span>+</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-content">
-                Entre em contato com o suporte para receber as informações atualizadas sobre disponibilidade e funcionamento.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" type="button">
-              <span>5. Como é feito o pagamento?</span>
-              <span>+</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-content">
-                O pagamento é feito via Pix. Ao clicar em contato suporte, você verá a chave Pix e as instruções para prosseguir.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" type="button">
-              <span>6. Posso comprar sem enviar o UDID?</span>
-              <span>+</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-content">
-                Não. O UDID é necessário para o registro correto do certificado no dispositivo. Sem ele, o processo não pode ser concluído.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" type="button">
-              <span>7. Funciona em qualquer versão do iOS?</span>
-              <span>+</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-content">
-                Funciona no ios 15 ou superior independentemente do modelo do iPhone.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" type="button">
-              <span>8. Como tirar dúvidas antes de comprar?</span>
-              <span>+</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-content">
-                Você pode usar o botão de contato para falar diretamente e confirmar as informações do seu aparelho antes de efetuar o pagamento.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-footer">
-            <p>Ainda tem dúvidas? Fale direto para confirmar as informações antes do contato.</p>
-            <a class="faq-contact" href="https://wa.me/5511992432053?text=vim%20do%20site%2C%20regras%20e%20pre%C3%A7o" target="_blank">Falar no WhatsApp</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="revogacao">
-      <div class="container">
-        <h2 class="section-title">Revogação de Certificado</h2>
-        <p class="section-subtitle">
-          Entenda como funciona a revogação e o que fazer nesses casos.
-        </p>
-
-        <div class="faq-wrap">
-          <div class="faq-item">
-            <button class="faq-question" type="button">
-              <span>1. O que significa um certificado revogado?</span>
-              <span>+</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-content">
-                Um certificado revogado indica que a Apple desativou a conta de desenvolvedor na qual seu dispositivo estava registrado. Uma vez que a conta é banida, o certificado associado a ela deixa de funcionar.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" type="button">
-              <span>2. O iToni revogou seu certificado?</span>
-              <span>+</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-content">
-                Não, o iToni não tem autoridade sobre revogações de certificados. Apenas a Apple tem a capacidade de revogar contas de desenvolvedores, e isso faz sem critérios claros ou conhecidos.<br><br>
-                No entanto, aconselhamos nossos usuários a evitar o uso de certificados em versões beta do iOS ou a instalação de aplicativos pouco confiáveis.<br><br>
-                A Apple pode realizar verificações internas no número de usuários cadastrados e aplicativos assinados.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" type="button">
-              <span>3. Como posso evitar uma revogação?</span>
-              <span>+</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-content">
-                Infelizmente, você não pode evitar completamente uma revogação, pois é algo que pode acontecer a qualquer momento.<br><br>
-                No entanto, você pode impedir que seu dispositivo verifique o status do certificado junto à Apple bloqueando os servidores DNS da Apple, permitindo que o certificado continue funcionando localmente.<br><br>
-                Fornecerei um guia detalhado e fácil de seguir sobre esse processo.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" type="button">
-              <span>4. Quais são os próximos passos?</span>
-              <span>+</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-content">
-                Se você adquiriu a versão econômica, será necessário comprar outro certificado.<br><br>
-                Mas se você realizou a compra do certificado com direito a renovação, será disponibilizado um novo certificado para você sem custo.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" type="button">
-              <span>5. Como usar o NextDNS para bloquear servidores da Apple e verificar o status do certificado caso meu certificado seja revogado?</span>
-              <span>+</span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-content">
-                <strong>1. Cadastre-se no NextDNS e coloque estes links na blacklist</strong>
-
-                <ul>
-                  <li>ocsp2.apple.com</li>
-                  <li>valid.apple.com</li>
-                  <li>crl.apple.com</li>
-                  <li>certs.apple.com</li>
-                  <li>appattest.apple.com</li>
-                  <li>vpp.itunes.apple.com</li>
-                  <li>ocsp2-lb.apple.com</li>
-                  <li>ocsp2.g.aaplimg.com</li>
-                  <li>crl3.digicert.com</li>
-                  <li>crl4.digicert.com</li>
-                  <li>ocsp.digicert.cn</li>
-                  <li>ocsp.digicert.com</li>
-                  <li>ocsp2-lb.apple.com.akadns.net</li>
-                  <li>gsas.apple.com</li>
-                  <li>gsas.idms-apple.com.akadns.net</li>
-                  <li>ma-gsa-hb-prod.apple.com</li>
-                  <li>aidc.apple.com</li>
-                  <li>init.ess.apple.com</li>
-                  <li>iphone-ld.origin-apple.com</li>
-                  <li>crl5.digicert.com</li>
-                  <li>crl2.digicert.com</li>
-                  <li>crl.digicert.com</li>
-                  <li>crl2.apple.com</li>
-                  <li>crl3.apple.com</li>
-                  <li>guzzoni-apple-com.v.aapling.com</li>
-                  <li>axm-app.apple.com</li>
-                  <li>comm-cohort.ess.apple.com</li>
-                  <li>comm-main.ess.apple.com</li>
-                  <li>mesu.apple.com</li>
-                  <li>xp.apple.com</li>
-                  <li>ppq.apple.com</li>
-                  <li>ocsp.apple.com</li>
-                  <li>PPQ.apple.com</li>
-                </ul>
-
-                <strong>As URLs para a lista de permissões:</strong>
-
-                <ul>
-                  <li>app.localhost.direct</li>
-                  <li>api.palera.in</li>
-                  <li>api.development.push.apple.com</li>
-                  <li>register.appattest.apple.com</li>
-                  <li>mask-h2.icloud.com</li>
-                  <li>mask-canary.icloud.com</li>
-                  <li>mask-api.icloud.com</li>
-                  <li>api.push.apple.com</li>
-                  <li>push.apple.com</li>
-                </ul>
-
-                <strong>Bloqueios Atualizações:</strong>
-
-                <ul>
-                  <li>gdmf.apple.com</li>
-                </ul>
-
-                Você também pode usar qualquer DNS que preferir.<br><br>
-
-                <strong>Nota importante:</strong> Ao instalar ou abrir aplicativos pela primeira vez, é importante desabilitar o DNS completo ou simplesmente desabilitar a URL "ppq.apple.com". Isso é necessário para a instalação bem-sucedida dos aplicativos.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-footer">
-            <p>Você está pronto para realizar a compra?</p>
-            <a class="faq-contact" href="https://wa.me/5511992432053?text=vim%20do%20site%2C%20regras%20e%20pre%C3%A7o" target="_blank">Comprar Agora</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="cta-block glass">
-          <h2>Pronto para solicitar seu certificado iOS?</h2>
-          <p>
-            Faça contato com o suporte, envie seu UDID e siga o processo com atendimento em português para conclusão.
-          </p>
-          <a class="btn" href="https://wa.me/5511992432053?text=vim%20do%20site%2C%20regras%20e%20pre%C3%A7o" target="_blank">Contato suporte</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-box">
-      <p><strong>Certificados iToni</strong></p>
-      <p>Atendimento Premium • Pagamento via Pix • Compatível com dispositivos Apple</p>
-      <p>© 2026 Todos os direitos reservados.</p>
-    </div>
-  </footer>
-
-  <script>
-    const faqItems = document.querySelectorAll('.faq-item');
-
-    faqItems.forEach((item) => {
-      const button = item.querySelector('.faq-question');
-      const answer = item.querySelector('.faq-answer');
-
-      button.addEventListener('click', () => {
-        const isActive = item.classList.contains('active');
-
-        faqItems.forEach((faq) => {
-          faq.classList.remove('active');
-          const faqAnswer = faq.querySelector('.faq-answer');
-          faqAnswer.style.maxHeight = null;
-        });
-
-        if (!isActive) {
-          item.classList.add('active');
-          answer.style.maxHeight = answer.scrollHeight + 'px';
-        }
-      });
-    });
-
-    window.addEventListener('resize', () => {
-      const activeItem = document.querySelector('.faq-item.active');
-      if (activeItem) {
-        const activeAnswer = activeItem.querySelector('.faq-answer');
-        activeAnswer.style.maxHeight = activeAnswer.scrollHeight + 'px';
-      }
-    });
-
-    const carousel = document.getElementById('testimonialCarousel');
-    const prevBtn = document.querySelector('.carousel-btn.prev');
-    const nextBtn = document.querySelector('.carousel-btn.next');
-
-    let autoplayInterval;
-    let isPointerDown = false;
-    let startX = 0;
-    let startScrollLeft = 0;
-
-    function getScrollStep() {
-      const firstCard = carousel.querySelector('.testimonial-card');
-      if (!firstCard) return 200;
-      const gap = 16;
-      return firstCard.offsetWidth + gap;
-    }
-
-    function scrollCarousel(direction = 1) {
-      const step = getScrollStep();
-      const maxScroll = carousel.scrollWidth - carousel.clientWidth;
-
-      if (direction > 0) {
-        if (carousel.scrollLeft + step >= maxScroll - 5) {
-          carousel.scrollTo({ left: 0, behavior: 'smooth' });
-        } else {
-          carousel.scrollBy({ left: step, behavior: 'smooth' });
-        }
-      } else {
-        if (carousel.scrollLeft <= 5) {
-          carousel.scrollTo({ left: maxScroll, behavior: 'smooth' });
-        } else {
-          carousel.scrollBy({ left: -step, behavior: 'smooth' });
-        }
-      }
-    }
-
-    function startAutoplay() {
-      stopAutoplay();
-      autoplayInterval = setInterval(() => {
-        scrollCarousel(1);
-      }, 8000);
-    }
-
-    function stopAutoplay() {
-      if (autoplayInterval) {
-        clearInterval(autoplayInterval);
-      }
-    }
-
-    prevBtn.addEventListener('click', () => {
-      stopAutoplay();
-      scrollCarousel(-1);
-      startAutoplay();
-    });
-
-    nextBtn.addEventListener('click', () => {
-      stopAutoplay();
-      scrollCarousel(1);
-      startAutoplay();
-    });
-
-    carousel.addEventListener('mouseenter', stopAutoplay);
-    carousel.addEventListener('mouseleave', startAutoplay);
-    carousel.addEventListener('touchstart', stopAutoplay, { passive: true });
-    carousel.addEventListener('touchend', startAutoplay);
-    carousel.addEventListener('scroll', () => {
-      if (carousel._scrollTimeout) clearTimeout(carousel._scrollTimeout);
-      carousel._scrollTimeout = setTimeout(() => {
-        if (!isPointerDown) startAutoplay();
-      }, 1200);
-    });
-
-    carousel.addEventListener('pointerdown', (e) => {
-      isPointerDown = true;
-      startX = e.pageX;
-      startScrollLeft = carousel.scrollLeft;
-      carousel.classList.add('dragging');
-      stopAutoplay();
-    });
-
-    carousel.addEventListener('pointermove', (e) => {
-      if (!isPointerDown) return;
-      const walk = e.pageX - startX;
-      carousel.scrollLeft = startScrollLeft - walk;
-    });
-
-    function endDrag() {
-      if (!isPointerDown) return;
-      isPointerDown = false;
-      carousel.classList.remove('dragging');
-      startAutoplay();
-    }
-
-    carousel.addEventListener('pointerup', endDrag);
-    carousel.addEventListener('pointerleave', endDrag);
-    carousel.addEventListener('pointercancel', endDrag);
-
-    window.addEventListener('load', startAutoplay);
-  </script>
 </body>
 </html>
