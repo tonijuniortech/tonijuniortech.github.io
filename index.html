@@ -783,7 +783,8 @@
   <header class="topbar">
     <div class="container nav">
       <a href="#inicio" class="brand">
-        <div class="brand-icon"></div>
+        <div class="brand-icon" style="background:none;box-shadow:none;border:none;opacity:.8">
+  /div>
         <span>Certificados iToni</span>
       </a>
 
@@ -1406,5 +1407,154 @@
 
     window.addEventListener('load', startAutoplay);
   </script>
+  
+  <!-- FIREBASE -->
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+
+<script>
+const firebaseConfig = {
+  apiKey: "AIzaSyCxHuPz2P0JR8rKOiY1yE_ZkOssnM_iK8E",
+  authDomain: "tonijuniortech.firebaseapp.com"
+};
+
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+</script>
+
+<!-- BOTÕES -->
+<script>
+const menu = document.querySelector('.menu');
+
+/* LOGIN BTN */
+const loginBtn = document.createElement("button");
+loginBtn.innerText = "Login";
+loginBtn.className = "btn-outline";
+
+/* LOGOUT BTN */
+const logoutBtn = document.createElement("button");
+logoutBtn.innerText = "Sair";
+logoutBtn.className = "btn-outline";
+logoutBtn.style.display = "none";
+
+/* INSTALAÇÃO BTN */
+const installBtn = document.createElement("button");
+installBtn.innerText = "Instalação";
+installBtn.className = "btn-outline";
+installBtn.style.display = "none";
+
+menu.appendChild(loginBtn);
+menu.appendChild(logoutBtn);
+menu.appendChild(installBtn);
+</script>
+
+<!-- MODAL LOGIN -->
+<div id="loginModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:9999;align-items:center;justify-content:center;">
+  <div style="background:#111;padding:30px;border-radius:20px;width:320px;position:relative;">
+    <span id="closeLogin" style="position:absolute;right:15px;top:10px;cursor:pointer;">✕</span>
+
+    <h3>Login</h3>
+
+    <input id="email" placeholder="Email" style="width:100%;margin:10px 0;padding:10px;border-radius:8px;border:none;">
+    <input id="password" type="password" placeholder="Senha" style="width:100%;margin:10px 0;padding:10px;border-radius:8px;border:none;">
+
+    <button id="loginEmail" class="btn" style="width:100%;">Entrar</button>
+    <button id="loginGoogle" class="btn" style="width:100%;margin-top:10px;background:#ea4335;">Google</button>
+  </div>
+</div>
+
+<!-- MODAL UPLOAD -->
+<div id="uploadModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:9999;align-items:center;justify-content:center;">
+  <div style="background:#111;padding:30px;border-radius:20px;width:340px;position:relative;">
+    <span id="closeUpload" style="position:absolute;right:15px;top:10px;cursor:pointer;">✕</span>
+
+    <h3>Enviar arquivos</h3>
+
+    <input type="file" id="ipa"><br><br>
+    <input type="file" id="p12"><br><br>
+    <input type="file" id="mobile"><br><br>
+    <input type="password" id="certPass" placeholder="Senha certificado"><br><br>
+
+    <button id="sendFiles" class="btn" style="width:100%;">Enviar</button>
+  </div>
+</div>
+
+<script>
+/* LOGIN */
+loginBtn.onclick = ()=>loginModal.style.display="flex";
+closeLogin.onclick = ()=>loginModal.style.display="none";
+
+loginEmail.onclick = ()=>{
+auth.signInWithEmailAndPassword(email.value,password.value)
+.then(()=>loginModal.style.display="none")
+.catch(()=>alert("Erro login"));
+};
+
+loginGoogle.onclick = ()=>{
+const provider = new firebase.auth.GoogleAuthProvider();
+auth.signInWithPopup(provider);
+};
+
+logoutBtn.onclick = ()=>auth.signOut();
+
+/* CONTROLE LOGIN */
+auth.onAuthStateChanged(user=>{
+if(user){
+loginBtn.style.display="none";
+logoutBtn.style.display="inline-flex";
+installBtn.style.display="inline-flex";
+}else{
+loginBtn.style.display="inline-flex";
+logoutBtn.style.display="none";
+installBtn.style.display="none";
+}
+});
+
+/* ABRIR UPLOAD */
+installBtn.onclick = ()=>{
+uploadModal.style.display="flex";
+};
+
+closeUpload.onclick = ()=>{
+uploadModal.style.display="none";
+};
+
+/* UPLOAD REAL */
+sendFiles.onclick = async ()=>{
+
+const user = auth.currentUser;
+
+if(!user){
+alert("Faça login");
+return;
+}
+
+const token = await user.getIdToken();
+
+const formData = new FormData();
+
+formData.append("ipa", ipa.files[0]);
+formData.append("p12", p12.files[0]);
+formData.append("mobile", mobile.files[0]);
+formData.append("password", certPass.value);
+
+try{
+await fetch("https://backend-itoni.onrender.com/upload", {
+method: "POST",
+headers: {
+Authorization: token
+},
+body: formData
+});
+
+alert("Enviado com sucesso!");
+uploadModal.style.display="none";
+
+}catch(e){
+alert("Erro no envio");
+}
+};
+</script>
+
 </body>
 </html>
