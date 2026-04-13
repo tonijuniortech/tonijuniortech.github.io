@@ -783,8 +783,7 @@
   <header class="topbar">
     <div class="container nav">
       <a href="#inicio" class="brand">
-        <div class="brand-icon" style="background:none;box-shadow:none;border:none;opacity:.8">
-  /div>
+        <div class="brand-icon"></div>
         <span>Certificados iToni</span>
       </a>
 
@@ -1407,109 +1406,5 @@
 
     window.addEventListener('load', startAutoplay);
   </script>
-  
-  <!-- FIREBASE -->
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
-
-<script>
-/* ================= CONFIG ================= */
-const firebaseConfig = {
-  apiKey: "COLE_SUA_API_KEY",
-  authDomain: "COLE_SEU_AUTH_DOMAIN"
-};
-
-const BACKEND_URL = "COLE_SEU_BACKEND_RENDER";
-
-/* ========================================== */
-
-firebase.initializeApp(firebaseConfig);
-const auth = firebase.auth();
-
-/* ELEMENTOS */
-const loginBtn = document.getElementById("loginBtn");
-const logoutBtn = document.getElementById("logoutBtn");
-const installBtn = document.getElementById("installBtn");
-
-/* LOGIN EMAIL */
-loginBtn.onclick = async () => {
-  const email = prompt("Email:");
-  const senha = prompt("Senha:");
-
-  if (!email || !senha) return;
-
-  try {
-    await auth.signInWithEmailAndPassword(email, senha);
-  } catch {
-    alert("Erro ao logar");
-  }
-};
-
-/* LOGIN GOOGLE */
-loginBtn.ondblclick = () => {
-  const provider = new firebase.auth.GoogleAuthProvider();
-  auth.signInWithPopup(provider);
-};
-
-/* LOGOUT */
-logoutBtn.onclick = () => auth.signOut();
-
-/* CONTROLE */
-auth.onAuthStateChanged(user => {
-  if (user) {
-    loginBtn.style.display = "none";
-    logoutBtn.style.display = "inline-flex";
-    installBtn.style.display = "inline-flex";
-  } else {
-    loginBtn.style.display = "inline-flex";
-    logoutBtn.style.display = "none";
-    installBtn.style.display = "none";
-  }
-});
-
-/* UPLOAD REAL */
-installBtn.onclick = async () => {
-
-  const user = auth.currentUser;
-
-  if (!user) {
-    alert("Faça login primeiro");
-    return;
-  }
-
-  const token = await user.getIdToken();
-
-  const input = document.createElement("input");
-  input.type = "file";
-  input.multiple = true;
-
-  input.onchange = async () => {
-
-    const formData = new FormData();
-
-    [...input.files].forEach(file => {
-      formData.append("files", file);
-    });
-
-    try {
-      await fetch(BACKEND_URL + "/upload", {
-        method: "POST",
-        headers: {
-          Authorization: token
-        },
-        body: formData
-      });
-
-      alert("Upload enviado com sucesso!");
-
-    } catch {
-      alert("Erro no envio");
-    }
-  };
-
-  input.click();
-};
-</script>
-
 </body>
 </html>
