@@ -10,26 +10,33 @@
   <title>Aplicativos iToni - Certificado iOS para iPhone, iPad e iPod</title>
 
   <meta name="description" content="Certificado iOS para dispositivos Apple. Atendimento em português, suporte direto, pagamento via Pix e registro mediante envio do UDID." />
-  <meta name="theme-color" content="#040814" />
   <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#040814" />
+
+  <link rel="preload" as="image" href="img/dep1.png" />
 
   <meta property="og:title" content="Aplicativos iToni - Certificado iOS para iPhone, iPad e iPod" />
   <meta property="og:description" content="Certificado iOS para dispositivos Apple com suporte em português, pagamento via Pix e atendimento direto." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://tonijuniortech.github.io/" />
-  <meta property="og:image" content="https://tonijuniortech.github.io/img/preview.png" />
+  <meta property="og:image" content="https://tonijuniortech.github.io/img/dep1.png" />
   <meta property="og:locale" content="pt_BR" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Aplicativos iToni - Certificado iOS" />
   <meta name="twitter:description" content="Certificado iOS para iPhone, iPad e iPod com suporte direto em português." />
-  <meta name="twitter:image" content="https://tonijuniortech.github.io/img/preview.png" />
+  <meta name="twitter:image" content="https://tonijuniortech.github.io/img/dep1.png" />
 
   <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1819143807433209" crossorigin="anonymous"></script>
 
   <style>
-    *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      -webkit-tap-highlight-color:transparent;
+    }
 
     :root{
       --bg-1:#040814;
@@ -166,7 +173,10 @@
       --compat-text:#7c4a03;
     }
 
-    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+    html{
+      scroll-behavior:smooth;
+      -webkit-text-size-adjust:100%;
+    }
 
     body{
       font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",Arial,Helvetica,sans-serif;
@@ -196,8 +206,15 @@
       z-index:0;
     }
 
-    a{color:inherit;text-decoration:none;}
-    img{max-width:100%;display:block;}
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
 
     .container{
       width:100%;
@@ -279,7 +296,9 @@
       white-space:nowrap;
     }
 
-    .menu a:hover{color:var(--menu-link-hover);}
+    .menu a:hover{
+      color:var(--menu-link-hover);
+    }
 
     .nav-auth{
       display:flex;
@@ -309,7 +328,9 @@
       -webkit-backdrop-filter:blur(16px);
     }
 
-    .theme-toggle:hover{transform:translateY(-1px);}
+    .theme-toggle:hover{
+      transform:translateY(-1px);
+    }
 
     .hamburger{
       display:none;
@@ -336,9 +357,18 @@
       transition:.3s ease;
     }
 
-    .hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg);}
-    .hamburger.active span:nth-child(2){opacity:0;transform:scaleX(0);}
-    .hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+    .hamburger.active span:nth-child(1){
+      transform:translateY(7px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2){
+      opacity:0;
+      transform:scaleX(0);
+    }
+
+    .hamburger.active span:nth-child(3){
+      transform:translateY(-7px) rotate(-45deg);
+    }
 
     .drawer-overlay{
       display:none;
@@ -352,8 +382,13 @@
       transition:opacity .3s ease;
     }
 
-    .drawer-overlay.visible{display:block;}
-    .drawer-overlay.open{opacity:1;}
+    .drawer-overlay.visible{
+      display:block;
+    }
+
+    .drawer-overlay.open{
+      opacity:1;
+    }
 
     .mobile-drawer{
       position:fixed;
@@ -375,7 +410,9 @@
       -webkit-overflow-scrolling:touch;
     }
 
-    .mobile-drawer.open{right:0;}
+    .mobile-drawer.open{
+      right:0;
+    }
 
     .drawer-close{
       position:absolute;
@@ -409,8 +446,13 @@
       transition:.2s ease;
     }
 
-    .mobile-drawer a:hover{background:var(--mobile-drawer-link-hover);}
-    .mobile-drawer a:active{transform:scale(.98);}
+    .mobile-drawer a:hover{
+      background:var(--mobile-drawer-link-hover);
+    }
+
+    .mobile-drawer a:active{
+      transform:scale(.98);
+    }
 
     .drawer-divider{
       height:1px;
@@ -668,7 +710,9 @@
       -webkit-backdrop-filter:blur(16px);
     }
 
-    section{padding:44px 0;}
+    section{
+      padding:44px 0;
+    }
 
     .section-title{
       font-size:38px;
@@ -729,7 +773,9 @@
       font-size:15px;
     }
 
-    .steps{counter-reset:step;}
+    .steps{
+      counter-reset:step;
+    }
 
     .step-card{
       position:relative;
@@ -819,7 +865,9 @@
       font-size:15px;
     }
 
-    .faq-answer-content strong{color:var(--text);}
+    .faq-answer-content strong{
+      color:var(--text);
+    }
 
     .faq-answer-content ul{
       margin:12px 0 0 18px;
@@ -966,8 +1014,13 @@
       transform:translateY(-50%) scale(1.05);
     }
 
-    .carousel-btn.prev{left:0;}
-    .carousel-btn.next{right:0;}
+    .carousel-btn.prev{
+      left:0;
+    }
+
+    .carousel-btn.next{
+      right:0;
+    }
 
     .testimonial-note{
       text-align:center;
@@ -976,36 +1029,115 @@
       margin-top:10px;
     }
 
+    .whatsapp-float{
+      position:fixed;
+      right:18px;
+      bottom:calc(18px + env(safe-area-inset-bottom));
+      width:58px;
+      height:58px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      font-size:28px;
+      background:linear-gradient(135deg,#22c55e,#16a34a);
+      color:#fff;
+      z-index:1200;
+      box-shadow:0 14px 32px rgba(22,163,74,.38);
+      border:1px solid rgba(255,255,255,.22);
+    }
+
+    .whatsapp-float:active{
+      transform:scale(.96);
+    }
+
+    @media(min-width:901px){
+      .whatsapp-float{
+        display:none;
+      }
+    }
+
     @media(max-width:1100px){
-      .menu{gap:12px;}
-      .menu a{font-size:12px;}
+      .menu{
+        gap:12px;
+      }
+
+      .menu a{
+        font-size:12px;
+      }
     }
 
     @media(max-width:900px){
-      .menu{display:none;}
-      .hamburger{display:flex;}
-      .hero-grid{grid-template-columns:1fr;}
-      .grid-4{grid-template-columns:1fr 1fr;}
-      .grid-3{grid-template-columns:1fr 1fr;}
-      h1{font-size:40px;}
-      .section-title{font-size:30px;}
-      .testimonial-carousel-wrap{padding:0 46px;}
+      .menu{
+        display:none;
+      }
+
+      .hamburger{
+        display:flex;
+      }
+
+      .hero-grid{
+        grid-template-columns:1fr;
+      }
+
+      .grid-4{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .grid-3{
+        grid-template-columns:1fr 1fr;
+      }
+
+      h1{
+        font-size:40px;
+      }
+
+      .section-title{
+        font-size:30px;
+      }
+
+      .testimonial-carousel-wrap{
+        padding:0 46px;
+      }
+
       .testimonial-card{
         min-width:155px;
         max-width:155px;
         flex-basis:155px;
       }
-      .testimonial-card img{height:305px;}
+
+      .testimonial-card img{
+        height:305px;
+      }
     }
 
     @media(max-width:600px){
-      .nav{padding:0 16px;}
-      .hero{padding-top:44px;}
-      h1{font-size:30px;}
-      .section-title{font-size:24px;}
-      .hero p{font-size:15px;}
-      .grid-4{grid-template-columns:1fr;}
-      .grid-3{grid-template-columns:1fr;}
+      .nav{
+        padding:0 16px;
+      }
+
+      .hero{
+        padding-top:44px;
+      }
+
+      h1{
+        font-size:30px;
+      }
+
+      .section-title{
+        font-size:24px;
+      }
+
+      .hero p{
+        font-size:15px;
+      }
+
+      .grid-4{
+        grid-template-columns:1fr;
+      }
+
+      .grid-3{
+        grid-template-columns:1fr;
+      }
 
       .hero-actions .btn,
       .hero-actions .btn-outline,
@@ -1015,7 +1147,9 @@
         border-radius:18px;
       }
 
-      .hero-points span{padding:14px 15px;}
+      .hero-points span{
+        padding:14px 15px;
+      }
 
       .hero-point-icon{
         width:38px;
@@ -1024,10 +1158,17 @@
         border-radius:12px;
       }
 
-      .hero-point-text strong{font-size:14px;}
-      .hero-point-text small{font-size:12px;}
+      .hero-point-text strong{
+        font-size:14px;
+      }
 
-      .testimonial-carousel-wrap{padding:0 38px;}
+      .hero-point-text small{
+        font-size:12px;
+      }
+
+      .testimonial-carousel-wrap{
+        padding:0 38px;
+      }
 
       .testimonial-card{
         min-width:138px;
@@ -1053,7 +1194,9 @@
         font-size:12px;
       }
 
-      .brand{font-size:15px;}
+      .brand{
+        font-size:15px;
+      }
 
       .brand-icon{
         width:34px;
@@ -1123,7 +1266,9 @@
       <div class="nav-auth">
         <button class="theme-toggle" id="themeToggle" type="button" aria-label="Alternar tema">🌙</button>
         <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileDrawer" type="button">
-          <span></span><span></span><span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
       </div>
     </div>
@@ -1227,34 +1372,34 @@
         <h2 class="section-title">Clientes satisfeitos</h2>
         <p class="section-subtitle">Veja alguns relatos enviados por clientes após a conclusão do processo.</p>
 
-        <div class="testimonial-highlight">⭐ +8k de clientes satisfeitos</div>
+        <div class="testimonial-highlight">⭐ Clientes satisfeitos em todo o Brasil</div>
 
         <div class="testimonial-carousel-wrap">
           <button class="carousel-btn prev" type="button" aria-label="Depoimento anterior">‹</button>
 
           <div class="testimonial-carousel" id="testimonialCarousel" aria-label="Carrossel de depoimentos">
             <a href="img/dep1.png" target="_blank" rel="noopener" class="testimonial-card glass">
-              <img src="img/dep1.png" alt="Depoimento 1 de cliente" loading="lazy" width="170" height="340">
+              <img src="img/dep1.png" alt="Depoimento 1 de cliente" loading="eager" fetchpriority="high" width="170" height="340" />
             </a>
 
             <a href="img/dep2.png" target="_blank" rel="noopener" class="testimonial-card glass">
-              <img src="img/dep2.png" alt="Depoimento 2 de cliente" loading="lazy" width="170" height="340">
+              <img src="img/dep2.png" alt="Depoimento 2 de cliente" loading="lazy" width="170" height="340" />
             </a>
 
             <a href="img/dep3.png" target="_blank" rel="noopener" class="testimonial-card glass">
-              <img src="img/dep3.png" alt="Depoimento 3 de cliente" loading="lazy" width="170" height="340">
+              <img src="img/dep3.png" alt="Depoimento 3 de cliente" loading="lazy" width="170" height="340" />
             </a>
 
             <a href="img/dep4.png" target="_blank" rel="noopener" class="testimonial-card glass">
-              <img src="img/dep4.png" alt="Depoimento 4 de cliente" loading="lazy" width="170" height="340">
+              <img src="img/dep4.png" alt="Depoimento 4 de cliente" loading="lazy" width="170" height="340" />
             </a>
 
             <a href="img/dep5.png" target="_blank" rel="noopener" class="testimonial-card glass">
-              <img src="img/dep5.png" alt="Depoimento 5 de cliente" loading="lazy" width="170" height="340">
+              <img src="img/dep5.png" alt="Depoimento 5 de cliente" loading="lazy" width="170" height="340" />
             </a>
 
             <a href="img/dep6.png" target="_blank" rel="noopener" class="testimonial-card glass">
-              <img src="img/dep6.png" alt="Depoimento 6 de cliente" loading="lazy" width="170" height="340">
+              <img src="img/dep6.png" alt="Depoimento 6 de cliente" loading="lazy" width="170" height="340" />
             </a>
           </div>
 
@@ -1335,7 +1480,8 @@
         <div class="faq-wrap">
           <div class="faq-item">
             <button class="faq-question" type="button">
-              <span>1. Em quais dispositivos funciona?</span><span>+</span>
+              <span>1. Em quais dispositivos funciona?</span>
+              <span>+</span>
             </button>
             <div class="faq-answer">
               <div class="faq-answer-content">O serviço funciona apenas com dispositivos Apple: iPhone, iPad e iPod Touch. Não funciona em Android.</div>
@@ -1344,7 +1490,8 @@
 
           <div class="faq-item">
             <button class="faq-question" type="button">
-              <span>2. O que é UDID?</span><span>+</span>
+              <span>2. O que é UDID?</span>
+              <span>+</span>
             </button>
             <div class="faq-answer">
               <div class="faq-answer-content">UDID é o identificador único do seu dispositivo Apple. Necessário para registrar corretamente o certificado.</div>
@@ -1353,7 +1500,8 @@
 
           <div class="faq-item">
             <button class="faq-question" type="button">
-              <span>3. Qual é o prazo de entrega?</span><span>+</span>
+              <span>3. Qual é o prazo de entrega?</span>
+              <span>+</span>
             </button>
             <div class="faq-answer">
               <div class="faq-answer-content">Entre em contato com o suporte para confirmar o prazo atualizado antes da compra.</div>
@@ -1362,7 +1510,8 @@
 
           <div class="faq-item">
             <button class="faq-question" type="button">
-              <span>4. Quanto tempo dura o certificado?</span><span>+</span>
+              <span>4. Quanto tempo dura o certificado?</span>
+              <span>+</span>
             </button>
             <div class="faq-answer">
               <div class="faq-answer-content">Entre em contato com o suporte para receber informações atualizadas sobre duração, regras e condições.</div>
@@ -1371,7 +1520,8 @@
 
           <div class="faq-item">
             <button class="faq-question" type="button">
-              <span>5. Como é feito o pagamento?</span><span>+</span>
+              <span>5. Como é feito o pagamento?</span>
+              <span>+</span>
             </button>
             <div class="faq-answer">
               <div class="faq-answer-content">Pagamento via Pix. Ao falar com o suporte, você recebe as instruções para finalizar corretamente.</div>
@@ -1380,7 +1530,8 @@
 
           <div class="faq-item">
             <button class="faq-question" type="button">
-              <span>6. Posso comprar sem o UDID?</span><span>+</span>
+              <span>6. Posso comprar sem o UDID?</span>
+              <span>+</span>
             </button>
             <div class="faq-answer">
               <div class="faq-answer-content">Não. O UDID é necessário. Sem ele o processo não pode ser concluído.</div>
@@ -1389,7 +1540,8 @@
 
           <div class="faq-item">
             <button class="faq-question" type="button">
-              <span>7. Funciona em qualquer versão do iOS?</span><span>+</span>
+              <span>7. Funciona em qualquer versão do iOS?</span>
+              <span>+</span>
             </button>
             <div class="faq-answer">
               <div class="faq-answer-content">Funciona no iOS 15 ou superior, em dispositivos Apple compatíveis.</div>
@@ -1398,7 +1550,8 @@
 
           <div class="faq-item">
             <button class="faq-question" type="button">
-              <span>8. Como tirar dúvidas antes de comprar?</span><span>+</span>
+              <span>8. Como tirar dúvidas antes de comprar?</span>
+              <span>+</span>
             </button>
             <div class="faq-answer">
               <div class="faq-answer-content">Use o botão de WhatsApp para falar diretamente com o suporte e confirmar as informações antes do pagamento.</div>
@@ -1423,7 +1576,8 @@
         <div class="faq-wrap">
           <div class="faq-item">
             <button class="faq-question" type="button">
-              <span>1. O que significa um certificado revogado?</span><span>+</span>
+              <span>1. O que significa um certificado revogado?</span>
+              <span>+</span>
             </button>
             <div class="faq-answer">
               <div class="faq-answer-content">Um certificado revogado indica que a Apple desativou a conta de desenvolvedor na qual seu dispositivo estava registrado.</div>
@@ -1432,7 +1586,8 @@
 
           <div class="faq-item">
             <button class="faq-question" type="button">
-              <span>2. O iToni revogou meu certificado?</span><span>+</span>
+              <span>2. O iToni revogou meu certificado?</span>
+              <span>+</span>
             </button>
             <div class="faq-answer">
               <div class="faq-answer-content">Não. Apenas a Apple tem capacidade de revogar contas de desenvolvedores, sem critérios claros.<br><br>Recomendamos evitar versões beta do iOS e apps pouco confiáveis.</div>
@@ -1441,7 +1596,8 @@
 
           <div class="faq-item">
             <button class="faq-question" type="button">
-              <span>3. Como posso evitar uma revogação?</span><span>+</span>
+              <span>3. Como posso evitar uma revogação?</span>
+              <span>+</span>
             </button>
             <div class="faq-answer">
               <div class="faq-answer-content">Não é possível evitar completamente. Porém, você pode bloquear servidores DNS da Apple via NextDNS para que o certificado continue funcionando localmente.</div>
@@ -1450,7 +1606,8 @@
 
           <div class="faq-item">
             <button class="faq-question" type="button">
-              <span>4. Quais são os próximos passos?</span><span>+</span>
+              <span>4. Quais são os próximos passos?</span>
+              <span>+</span>
             </button>
             <div class="faq-answer">
               <div class="faq-answer-content">Versão econômica: será necessário comprar outro certificado. Com direito a renovação: um novo certificado será disponibilizado sem custo, conforme as regras contratadas.</div>
@@ -1459,8 +1616,10 @@
 
           <div class="faq-item">
             <button class="faq-question" type="button">
-              <span>5. Como configurar o app NextDNS</span><span>+</span>
+              <span>5. Como configurar o app NextDNS</span>
+              <span>+</span>
             </button>
+
             <div class="faq-answer">
               <div class="faq-answer-content">
                 <p style="margin-bottom:14px;">
@@ -1557,9 +1716,14 @@
     <div class="container footer-box">
       <p><strong>Aplicativos iToni</strong></p>
       <p>Atendimento Premium • Pagamento via Pix • Compatível com dispositivos Apple</p>
+      <p>Serviço independente. Não somos afiliados à Apple Inc.</p>
       <p>© 2026 Todos os direitos reservados.</p>
     </div>
   </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/5511992432053?text=vim%20do%20site%2C%20regras%20e%20pre%C3%A7o" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    💬
+  </a>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -1569,8 +1733,14 @@
 
       function updateThemeButtons(theme){
         const icon = theme === "light" ? "☀️" : "🌙";
-        if(themeToggle) themeToggle.textContent = icon;
-        if(themeToggleMobile) themeToggleMobile.textContent = icon;
+
+        if(themeToggle){
+          themeToggle.textContent = icon;
+        }
+
+        if(themeToggleMobile){
+          themeToggleMobile.textContent = icon;
+        }
       }
 
       function setTheme(theme){
@@ -1592,8 +1762,13 @@
         setTheme(current === "dark" ? "light" : "dark");
       }
 
-      if(themeToggle) themeToggle.addEventListener("click", toggleTheme);
-      if(themeToggleMobile) themeToggleMobile.addEventListener("click", toggleTheme);
+      if(themeToggle){
+        themeToggle.addEventListener("click", toggleTheme);
+      }
+
+      if(themeToggleMobile){
+        themeToggleMobile.addEventListener("click", toggleTheme);
+      }
 
       const hamburgerBtn  = document.getElementById("hamburgerBtn");
       const mobileDrawer  = document.getElementById("mobileDrawer");
@@ -1601,7 +1776,9 @@
       const drawerClose   = document.getElementById("drawerClose");
 
       function openDrawer(){
-        if(!hamburgerBtn || !mobileDrawer || !drawerOverlay) return;
+        if(!hamburgerBtn || !mobileDrawer || !drawerOverlay){
+          return;
+        }
 
         drawerOverlay.classList.add("visible");
 
@@ -1617,7 +1794,9 @@
       }
 
       function closeDrawer(){
-        if(!hamburgerBtn || !mobileDrawer || !drawerOverlay) return;
+        if(!hamburgerBtn || !mobileDrawer || !drawerOverlay){
+          return;
+        }
 
         mobileDrawer.classList.remove("open");
         drawerOverlay.classList.remove("open");
@@ -1633,12 +1812,21 @@
 
       if(hamburgerBtn){
         hamburgerBtn.addEventListener("click", () => {
-          mobileDrawer.classList.contains("open") ? closeDrawer() : openDrawer();
+          if(mobileDrawer.classList.contains("open")){
+            closeDrawer();
+          } else {
+            openDrawer();
+          }
         });
       }
 
-      if(drawerClose) drawerClose.addEventListener("click", closeDrawer);
-      if(drawerOverlay) drawerOverlay.addEventListener("click", closeDrawer);
+      if(drawerClose){
+        drawerClose.addEventListener("click", closeDrawer);
+      }
+
+      if(drawerOverlay){
+        drawerOverlay.addEventListener("click", closeDrawer);
+      }
 
       document.querySelectorAll(".mobile-drawer a").forEach(link => {
         link.addEventListener("click", closeDrawer);
@@ -1658,8 +1846,12 @@
           document.querySelectorAll(".faq-item").forEach(otherItem => {
             if(otherItem !== item){
               otherItem.classList.remove("active");
+
               const otherAnswer = otherItem.querySelector(".faq-answer");
-              if(otherAnswer) otherAnswer.style.maxHeight = null;
+
+              if(otherAnswer){
+                otherAnswer.style.maxHeight = null;
+              }
             }
           });
 
@@ -1685,15 +1877,15 @@
 
         prevBtn.addEventListener("click", () => {
           carousel.scrollBy({
-            left: -scrollAmount(),
-            behavior: "smooth"
+            left:-scrollAmount(),
+            behavior:"smooth"
           });
         });
 
         nextBtn.addEventListener("click", () => {
           carousel.scrollBy({
-            left: scrollAmount(),
-            behavior: "smooth"
+            left:scrollAmount(),
+            behavior:"smooth"
           });
         });
 
@@ -1719,8 +1911,12 @@
         });
 
         carousel.addEventListener("mousemove", event => {
-          if(!isDown) return;
+          if(!isDown){
+            return;
+          }
+
           event.preventDefault();
+
           const x = event.pageX - carousel.offsetLeft;
           const walk = (x - startX) * 1.4;
           carousel.scrollLeft = scrollLeft - walk;
