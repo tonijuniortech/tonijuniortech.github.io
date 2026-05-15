@@ -938,6 +938,131 @@
       color:var(--text);
     }
 
+
+    .video-section-intro{
+      max-width:780px;
+      margin:0 auto 24px;
+      text-align:center;
+      color:var(--muted);
+      font-size:16px;
+    }
+
+    .video-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+      align-items:stretch;
+    }
+
+    .video-card{
+      position:relative;
+      overflow:hidden;
+      border-radius:22px;
+      background:linear-gradient(180deg,var(--card-bg-1),var(--card-bg-2));
+      border:1px solid var(--glass-border);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(18px);
+      -webkit-backdrop-filter:blur(18px);
+      transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease;
+    }
+
+    .video-card:hover{
+      transform:translateY(-4px);
+      border-color:rgba(255,255,255,.28);
+      box-shadow:0 22px 70px rgba(0,0,0,.42);
+    }
+
+    .video-thumb{
+      position:relative;
+      display:block;
+      aspect-ratio:16/9;
+      overflow:hidden;
+      background:#000;
+    }
+
+    .video-thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:transform .3s ease,filter .3s ease;
+    }
+
+    .video-card:hover .video-thumb img{
+      transform:scale(1.05);
+      filter:brightness(.78);
+    }
+
+    .video-play{
+      position:absolute;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.48));
+    }
+
+    .video-play span{
+      width:58px;
+      height:58px;
+      border-radius:999px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:rgba(255,255,255,.92);
+      color:#111827;
+      font-size:25px;
+      font-weight:900;
+      padding-left:4px;
+      box-shadow:0 16px 40px rgba(0,0,0,.35);
+    }
+
+    .video-content{
+      padding:16px 16px 18px;
+    }
+
+    .video-content h3{
+      font-size:16px;
+      line-height:1.35;
+      margin-bottom:8px;
+      color:var(--text);
+    }
+
+    .video-content p{
+      font-size:14px;
+      color:var(--muted);
+      margin-bottom:14px;
+    }
+
+    .video-link{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:100%;
+      padding:11px 12px;
+      border-radius:14px;
+      font-size:14px;
+      font-weight:800;
+      background:linear-gradient(135deg,var(--primary),var(--primary-2));
+      color:#fff;
+      box-shadow:0 12px 30px rgba(45,107,255,.28);
+    }
+
+    @media(max-width:1024px){
+      .video-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+
+    @media(max-width:640px){
+      .video-grid{
+        grid-template-columns:1fr;
+      }
+
+      .video-content h3{
+        font-size:17px;
+      }
+    }
+
     .testimonial-carousel-wrap{
       position:relative;
       padding:0 56px;
@@ -1231,6 +1356,7 @@
     <a href="#inicio">🏠 Início</a>
     <a href="#beneficios">⭐ Benefícios</a>
     <a href="#depoimentos">💬 Depoimentos</a>
+    <a href="#videos">▶️ Vídeos</a>
     <a href="#como-funciona">📋 Como funciona</a>
     <a href="#compatibilidade">📱 Compatibilidade</a>
     <a href="#faq">❓ FAQ</a>
@@ -1257,6 +1383,7 @@
         <a href="#inicio">Início</a>
         <a href="#beneficios">Benefícios</a>
         <a href="#depoimentos">Depoimentos</a>
+        <a href="#videos">Vídeos</a>
         <a href="#como-funciona">Como funciona</a>
         <a href="#compatibilidade">Compatibilidade</a>
         <a href="#faq">FAQ</a>
@@ -1407,6 +1534,65 @@
         </div>
 
         <p class="testimonial-note">Arraste com o dedo, deslize ou use as setas.</p>
+      </div>
+    </section>
+
+
+    <section id="videos">
+      <div class="container">
+        <h2 class="section-title">Vídeos em destaque</h2>
+        <p class="section-subtitle">Assista aos tutoriais mais importantes do canal antes de comprar ou tirar dúvidas.</p>
+        <p class="video-section-intro">Selecionei vídeos fortes para aumentar confiança, reduzir dúvidas no WhatsApp e ajudar o cliente a entender melhor o processo.</p>
+
+        <div class="video-grid">
+          <article class="video-card">
+            <a class="video-thumb" href="https://www.youtube.com/watch?v=AZjedgNNeMw" target="_blank" rel="noopener" aria-label="Assistir vídeo no YouTube">
+              <img src="https://i.ytimg.com/vi/AZjedgNNeMw/hqdefault.jpg" alt="Vídeo sobre WhatsApp e Watusi no iPhone" loading="lazy" width="480" height="270" />
+              <div class="video-play" aria-hidden="true"><span>▶</span></div>
+            </a>
+            <div class="video-content">
+              <h3>WhatsApp / Watusi no iPhone</h3>
+              <p>Tutorial direto para quem quer entender o processo no iPhone.</p>
+              <a class="video-link" href="https://www.youtube.com/watch?v=AZjedgNNeMw" target="_blank" rel="noopener">Assistir agora</a>
+            </div>
+          </article>
+
+          <article class="video-card">
+            <a class="video-thumb" href="https://www.youtube.com/watch?v=xgRsT6dwRck" target="_blank" rel="noopener" aria-label="Assistir vídeo no YouTube">
+              <img src="https://i.ytimg.com/vi/xgRsT6dwRck/hqdefault.jpg" alt="Vídeo sobre instalação com ESign no iPhone" loading="lazy" width="480" height="270" />
+              <div class="video-play" aria-hidden="true"><span>▶</span></div>
+            </a>
+            <div class="video-content">
+              <h3>Instalação com ESign</h3>
+              <p>Conteúdo útil para mostrar o funcionamento na prática.</p>
+              <a class="video-link" href="https://www.youtube.com/watch?v=xgRsT6dwRck" target="_blank" rel="noopener">Assistir agora</a>
+            </div>
+          </article>
+
+          <article class="video-card">
+            <a class="video-thumb" href="https://www.youtube.com/watch?v=BvrKUaV7KJ0" target="_blank" rel="noopener" aria-label="Assistir vídeo no YouTube">
+              <img src="https://i.ytimg.com/vi/BvrKUaV7KJ0/hqdefault.jpg" alt="Vídeo explicativo sobre NextDNS" loading="lazy" width="480" height="270" />
+              <div class="video-play" aria-hidden="true"><span>▶</span></div>
+            </a>
+            <div class="video-content">
+              <h3>NextDNS e proteção</h3>
+              <p>Vídeo importante para orientar clientes sobre bloqueios e cuidados.</p>
+              <a class="video-link" href="https://www.youtube.com/watch?v=BvrKUaV7KJ0" target="_blank" rel="noopener">Assistir agora</a>
+            </div>
+          </article>
+
+          <article class="video-card">
+            <a class="video-thumb" href="https://www.youtube.com/watch?v=Fakw3Gbl8BQ" target="_blank" rel="noopener" aria-label="Assistir vídeo no YouTube">
+              <img src="https://i.ytimg.com/vi/Fakw3Gbl8BQ/hqdefault.jpg" alt="Vídeo tutorial sobre Watusi no iPhone" loading="lazy" width="480" height="270" />
+              <div class="video-play" aria-hidden="true"><span>▶</span></div>
+            </a>
+            <div class="video-content">
+              <h3>Tutorial Watusi no iPhone</h3>
+              <p>Mais um conteúdo de apoio para gerar autoridade e confiança.</p>
+              <a class="video-link" href="https://www.youtube.com/watch?v=Fakw3Gbl8BQ" target="_blank" rel="noopener">Assistir agora</a>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
