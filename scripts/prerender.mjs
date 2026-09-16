@@ -121,6 +121,9 @@ for (const [route, content] of Object.entries(pages)) {
   if (!html.includes('google-adsense-account')) {
     html = html.replace('<meta name="viewport" content="width=device-width, initial-scale=1.0" />', '<meta name="viewport" content="width=device-width, initial-scale=1.0" />\n    <meta name="google-adsense-account" content="ca-pub-1819143807433209" />');
   }
+  if (!html.includes('rel="icon"')) {
+    html = html.replace('<link rel="canonical"', '<link rel="icon" href="/img/logo-itoni.svg" type="image/svg+xml" />\n    <link rel="canonical"');
+  }
   html = html.replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${canonical}" />`);
   html = html.replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${canonical}" />`);
   html = html.replace('<div id="root"></div>', `<div id="root">${content}</div>`);
