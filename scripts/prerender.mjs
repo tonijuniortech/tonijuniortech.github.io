@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import crypto from 'node:crypto';
 
 const root = path.resolve(import.meta.dirname, '..');
 const site = 'https://tonijuniortec.com.br';
@@ -213,7 +214,9 @@ for (const relative of ['index.html', 'noticias/index.html']) {
   fs.writeFileSync(file, html);
 }
 
-const bundlePath = path.join(root, 'assets', 'index-Drd82w_B.js');
+const bundleFile = fs.readdirSync(path.join(root, 'assets')).find(name => /^index-.*\.js$/.test(name));
+if (!bundleFile) throw new Error('Arquivo JavaScript principal não encontrado.');
+const bundlePath = path.join(root, 'assets', bundleFile);
 let bundle = fs.readFileSync(bundlePath, 'utf8');
 const newest = articles[0];
 if (!bundle.includes(newest.slug)) {
@@ -221,7 +224,19 @@ if (!bundle.includes(newest.slug)) {
   const anchor = 'Dr=[';
   if (!bundle.includes(anchor)) throw new Error('Não foi possível localizar a lista de artigos no aplicativo.');
   bundle = bundle.replace(anchor, `${anchor}${runtimePost},`);
-  fs.writeFileSync(bundlePath, bundle);
+}
+fs.writeFileSync(bundlePath, bundle);
+
+const bundleHash = crypto.createHash('sha256').update(bundle).digest('hex').slice(0, 10);
+const versionedBundleFile = `index-${bundleHash}.js`;
+const versionedBundlePath = path.join(root, 'assets', versionedBundleFile);
+if (bundleFile !== versionedBundleFile) fs.renameSync(bundlePath, versionedBundlePath);
+
+for (const file of [...Object.keys(pages).map(route => route === '/' ? 'index.html' : `${route.slice(1)}/index.html`), '404.html']) {
+  const absolute = path.join(root, file);
+  let html = fs.readFileSync(absolute, 'utf8');
+  html = html.replace(/\/assets\/index-[^"']+\.js/g, `/assets/${versionedBundleFile}`);
+  fs.writeFileSync(absolute, html);
 }
 
 console.log(`Pré-renderização concluída para ${Object.keys(pages).length} páginas.`);
