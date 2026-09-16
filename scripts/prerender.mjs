@@ -180,6 +180,19 @@ for (const a of articles) {
   fs.writeFileSync(file, html);
 }
 
+const staticCard = (a) => `<article class="article-card"><div class="card-body"><p class="eyebrow">${a.category} · ${a.topic}</p><h2><a href="/artigos/${a.slug}/">${a.title}</a></h2><p>${a.description}</p><a href="/artigos/${a.slug}/">Ler artigo completo</a></div></article>`;
+for (const relative of ['index.html', 'noticias/index.html']) {
+  const file = path.join(root, relative);
+  let html = fs.readFileSync(file, 'utf8');
+  for (const article of articles.filter(item => relative === 'index.html' || item.category === 'Notícias')) {
+    const href = `/artigos/${article.slug}/`;
+    if (!html.includes(`href="${href}"`)) {
+      html = html.replace('<div class="article-grid">', `<div class="article-grid">${staticCard(article)}`);
+    }
+  }
+  fs.writeFileSync(file, html);
+}
+
 const bundlePath = path.join(root, 'assets', 'index-Drd82w_B.js');
 let bundle = fs.readFileSync(bundlePath, 'utf8');
 const newest = articles[0];
