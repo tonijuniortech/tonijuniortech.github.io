@@ -6,6 +6,26 @@ const site = 'https://tonijuniortec.com.br';
 
 const articles = [
   {
+    slug: 'ios-27-2-siri-ai-portugues-novos-idiomas',
+    title: 'iOS 27.2 leva Siri AI em português a mais usuários',
+    description: 'Primeira beta amplia a Siri AI para português, espanhol, francês, japonês e coreano. Veja os requisitos e por que ainda não é indicada para o iPhone principal.',
+    category: 'Notícias', topic: 'iOS', date: '16 de setembro de 2026', published: '2026-09-16',
+    sections: [
+      ['Siri AI começa a falar novos idiomas', 'A primeira versão beta do iOS 27.2 amplia o suporte da Siri AI para cinco idiomas: português, espanhol, francês, japonês e coreano. A estreia pública do iOS 27 havia começado com a nova assistente disponível em inglês. A expansão torna os testes mais relevantes para usuários brasileiros, mas ainda faz parte de uma compilação destinada a desenvolvedores.'],
+      ['O que muda para quem usa português', 'Com o aparelho e a Siri configurados para um idioma compatível, a Siri AI pode oferecer conversas mais naturais, respostas elaboradas e recursos integrados à Apple Intelligence. A simples presença do português na beta não garante que todas as funções estejam traduzidas ou disponíveis ao mesmo tempo. A própria Apple alerta que determinados recursos podem variar conforme idioma, região e modelo do aparelho.'],
+      ['Quais aparelhos são compatíveis', 'Segundo a Apple, a Siri AI exige um dispositivo compatível com a Apple Intelligence. No iPhone, isso inclui iPhone 15 Pro, iPhone 15 Pro Max e modelos da família iPhone 16 ou posteriores. Também é necessário manter o idioma do aparelho e o idioma da Siri em uma opção aceita. Modelos mais antigos podem continuar usando a Siri tradicional, mas não recebem toda a estrutura da Siri AI.'],
+      ['Português já estava nos planos da Apple', 'Quando apresentou a Siri AI, a Apple informou que o lançamento começaria em inglês e que o suporte a português chegaria ainda em 2026. Em setembro, a empresa voltou a indicar que francês, japonês, coreano, português e espanhol seriam adicionados em outubro. A presença desses idiomas na beta do iOS 27.2 é coerente com esse cronograma, embora datas de versões de teste possam mudar.'],
+      ['Não instale a beta apenas por esse recurso', 'Betas para desenvolvedores podem causar aquecimento, consumo elevado de bateria, falhas em aplicativos bancários, problemas de conexão e perda de estabilidade. Antes de qualquer teste, faça backup completo e use um aparelho secundário. Para a maioria das pessoas, a decisão correta é aguardar a versão pública do iOS 27.2 e confirmar a disponibilidade do português nos canais oficiais.'],
+      ['Como verificar quando chegar à versão estável', 'Quando a atualização pública estiver disponível, acesse Ajustes, Geral e Atualização de Software. Depois da instalação, confira o idioma do iPhone e as opções da Siri. A disponibilidade também pode depender da região da conta, do modelo e dos termos da Apple Intelligence. O iToni atualizará esta notícia se a Apple alterar os requisitos ou o calendário de lançamento.']
+    ],
+    sources: [
+      ['9to5Mac — iOS 27.2 expands Siri AI to these new languages', 'https://9to5mac.com/2026/09/16/ios-27-2-expands-siri-ai-to-these-new-languages/'],
+      ['Apple Brasil — iOS 27 e Siri AI', 'https://www.apple.com/br/os/ios/'],
+      ['Apple Brasil — apresentação da Siri AI', 'https://www.apple.com/br/newsroom/2026/06/apple-introduces-siri-ai-a-profoundly-more-capable-and-personal-assistant/'],
+      ['Apple Support — requisitos da Siri AI no iPhone', 'https://support.apple.com/guide/iphone/get-started-with-siri-ai-iphv6zwrg8jvfgr/27/ios/27']
+    ]
+  },
+  {
     slug: 'apple-beta-watchos-27-2-tvos-27-2-visionos-27-2',
     title: 'Apple libera primeiras versões beta do watchOS 27.2, tvOS 27.2 e visionOS 27.2',
     description: 'Nova rodada de testes começou poucos dias após os sistemas 27.0. Entenda quais plataformas receberam a beta e por que usuários comuns devem esperar.',
@@ -198,9 +218,9 @@ let bundle = fs.readFileSync(bundlePath, 'utf8');
 const newest = articles[0];
 if (!bundle.includes(newest.slug)) {
   const runtimePost = `Er(${JSON.stringify(newest.slug)},${JSON.stringify(newest.title)},${JSON.stringify(newest.description)},${JSON.stringify(newest.category)},${JSON.stringify(newest.topic)},\`update\`,${JSON.stringify(newest.sections)},{readTime:\`7 min\`,date:${JSON.stringify(newest.date)},published:${JSON.stringify(newest.published)},modified:${JSON.stringify(newest.published)},sources:${JSON.stringify(newest.sources.map(([name,url]) => ({name,url})))}})`;
-  const anchor = 'Dr=[Er(`vazamento-chip-a20-pro-iphone-18-pro`';
+  const anchor = 'Dr=[';
   if (!bundle.includes(anchor)) throw new Error('Não foi possível localizar a lista de artigos no aplicativo.');
-  bundle = bundle.replace(anchor, `Dr=[${runtimePost},Er(\`vazamento-chip-a20-pro-iphone-18-pro\``);
+  bundle = bundle.replace(anchor, `${anchor}${runtimePost},`);
   fs.writeFileSync(bundlePath, bundle);
 }
 
