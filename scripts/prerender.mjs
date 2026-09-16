@@ -6,6 +6,25 @@ const site = 'https://tonijuniortec.com.br';
 
 const articles = [
   {
+    slug: 'apple-beta-watchos-27-2-tvos-27-2-visionos-27-2',
+    title: 'Apple libera primeiras versões beta do watchOS 27.2, tvOS 27.2 e visionOS 27.2',
+    description: 'Nova rodada de testes começou poucos dias após os sistemas 27.0. Entenda quais plataformas receberam a beta e por que usuários comuns devem esperar.',
+    category: 'Notícias', topic: 'Apple', date: '16 de setembro de 2026', published: '2026-09-16',
+    sections: [
+      ['Uma nova rodada de testes começou', 'A Apple iniciou a distribuição das primeiras versões beta do watchOS 27.2, tvOS 27.2 e visionOS 27.2 para desenvolvedores. O movimento aconteceu poucos dias depois da liberação pública das versões 27.0 e chama atenção porque a numeração avançou diretamente para 27.2 nesses sistemas. Até o momento, a empresa não apresentou uma lista pública completa de novidades voltadas ao usuário.'],
+      ['Por que a numeração 27.2 chama atenção', 'O caminho mais comum seria a chegada de versões 27.1 antes do ciclo 27.2. A ausência inicial dessas compilações para Apple Watch, Apple TV e Vision Pro não significa necessariamente que elas foram canceladas. A Apple pode manter atualizações intermediárias concentradas em segurança, compatibilidade e correções internas, enquanto testa outro conjunto de mudanças em paralelo.'],
+      ['O que pode mudar nas próximas versões', 'Em uma primeira beta, alterações visíveis nem sempre aparecem imediatamente. A empresa costuma usar as compilações iniciais para testar estabilidade, APIs, consumo de energia, integração entre dispositivos e compatibilidade com aplicativos. Recursos maiores podem surgir em versões posteriores ou permanecer restritos a ajustes internos. Por isso, ainda é cedo para afirmar quais novidades chegarão à versão final.'],
+      ['Beta para desenvolvedores exige cautela', 'Versões beta podem apresentar consumo elevado de bateria, falhas de conexão, reinicializações e incompatibilidade com aplicativos. No Apple Watch, a instalação merece cuidado adicional porque o retorno manual para uma versão pública pode ser limitado e exigir atendimento especializado. O ideal é testar apenas em dispositivo secundário, depois de conferir as condições do programa e manter os aparelhos principais nas versões estáveis.'],
+      ['Como acompanhar a disponibilidade', 'Desenvolvedores inscritos podem consultar as áreas oficiais de downloads e notas de versão da Apple. O aparecimento de uma atualização no aparelho depende do modelo compatível, da conta vinculada e da opção de atualizações beta. Usuários comuns não precisam fazer nenhuma alteração: quando a versão estiver pronta, ela será distribuída pelos canais normais de Atualização de Software.'],
+      ['O que sabemos até agora', 'A informação confirmada é o início de uma nova etapa de testes para os sistemas complementares da Apple. Ainda não há base suficiente para prometer recursos específicos ou uma data de lançamento público. O iToni acompanhará as próximas compilações e atualizará esta notícia quando surgirem mudanças verificáveis nas notas oficiais ou nos testes dos desenvolvedores.']
+    ],
+    sources: [
+      ['9to5Mac — Apple releases beta 1 for watchOS 27.2, tvOS 27.2, more', 'https://9to5mac.com/2026/09/16/apple-releases-beta-1-for-watchos-27-2-tvos-27-2-more/'],
+      ['Apple Developer — Releases', 'https://developer.apple.com/news/releases/'],
+      ['Apple Developer — watchOS Release Notes', 'https://developer.apple.com/documentation/watchos-release-notes/']
+    ]
+  },
+  {
     slug: 'vazamento-chip-a20-pro-iphone-18-pro',
     title: 'Vazamento aponta avanços no chip A20 Pro do iPhone 18 Pro',
     description: 'Suposto diagrama do A20 Pro indica GPU maior, interface de memória mais larga e aumento de cache. Entenda o que pode mudar na prática.',
@@ -116,6 +135,22 @@ function escapeRegex(value) { return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'
 for (const [route, content] of Object.entries(pages)) {
   const file = route === '/' ? 'index.html' : `${route.slice(1)}/index.html`;
   const absolute = path.join(root, file);
+  if (!fs.existsSync(absolute)) {
+    fs.mkdirSync(path.dirname(absolute), { recursive: true });
+    const source = fs.readFileSync(path.join(root, 'artigos', 'iphone-parou-em-80-por-cento', 'index.html'), 'utf8');
+    const rootStart = source.indexOf('<div id="root">');
+    const bodyEnd = source.lastIndexOf('</body>');
+    const article = articles.find(item => route === `/artigos/${item.slug}`);
+    let template = `${source.slice(0, rootStart)}<div id="root"></div>\n  ${source.slice(bodyEnd)}`;
+    if (article) {
+      template = template
+        .replace(/<title>.*?<\/title>/, `<title>${article.title} | iToni</title>`)
+        .replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${article.description}" />`)
+        .replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${article.title} | iToni" />`)
+        .replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${article.description}" />`);
+    }
+    fs.writeFileSync(absolute, template);
+  }
   let html = fs.readFileSync(absolute, 'utf8');
   const canonical = `${site}${route === '/' ? '/' : `${route}/`}`;
   if (!html.includes('google-adsense-account')) {
@@ -143,6 +178,17 @@ for (const a of articles) {
       mainEntityOfPage: `${site}/artigos/${a.slug}/`, inLanguage:'pt-BR'
     })}</script>`);
   fs.writeFileSync(file, html);
+}
+
+const bundlePath = path.join(root, 'assets', 'index-Drd82w_B.js');
+let bundle = fs.readFileSync(bundlePath, 'utf8');
+const newest = articles[0];
+if (!bundle.includes(newest.slug)) {
+  const runtimePost = `Er(${JSON.stringify(newest.slug)},${JSON.stringify(newest.title)},${JSON.stringify(newest.description)},${JSON.stringify(newest.category)},${JSON.stringify(newest.topic)},\`update\`,${JSON.stringify(newest.sections)},{readTime:\`7 min\`,date:${JSON.stringify(newest.date)},published:${JSON.stringify(newest.published)},modified:${JSON.stringify(newest.published)},sources:${JSON.stringify(newest.sources.map(([name,url]) => ({name,url})))}})`;
+  const anchor = 'Dr=[Er(`vazamento-chip-a20-pro-iphone-18-pro`';
+  if (!bundle.includes(anchor)) throw new Error('Não foi possível localizar a lista de artigos no aplicativo.');
+  bundle = bundle.replace(anchor, `Dr=[${runtimePost},Er(\`vazamento-chip-a20-pro-iphone-18-pro\``);
+  fs.writeFileSync(bundlePath, bundle);
 }
 
 console.log(`Pré-renderização concluída para ${Object.keys(pages).length} páginas.`);
