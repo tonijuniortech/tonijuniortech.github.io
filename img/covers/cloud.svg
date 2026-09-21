@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Ilustração de backup em nuvem">
+  <defs><linearGradient id="c" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#11274a"/><stop offset="1" stop-color="#3064aa"/></linearGradient><filter id="g"><feGaussianBlur stdDeviation="34"/></filter></defs>
+  <rect width="1600" height="900" rx="56" fill="url(#c)"/><circle cx="1280" cy="150" r="260" fill="#93d9ff" opacity=".24" filter="url(#g)"/><circle cx="250" cy="750" r="250" fill="#4372ec" opacity=".18" filter="url(#g)"/>
+  <g transform="translate(430 195)" fill="none" stroke="#f2fbff" stroke-linecap="round" stroke-linejoin="round"><path d="M560 470H205c-96 0-165-63-165-151 0-84 64-148 151-148 17 0 33 2 48 7C275 92 360 38 458 38c132 0 238 103 238 230 75 3 136 63 136 137 0 36-15 68-40 91-24 22-57 34-92 34z" fill="#75c7ec" fill-opacity=".25" stroke-width="25"/><path d="m424 170-84 84 58 0v116h52V254h58z" fill="#f7fdff" stroke="none"/></g>
+</svg>

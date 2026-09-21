@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Ilustração de atualização de software">
+  <defs><linearGradient id="u" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0e2444"/><stop offset="1" stop-color="#146b8c"/></linearGradient><filter id="g"><feGaussianBlur stdDeviation="32"/></filter></defs>
+  <rect width="1600" height="900" rx="56" fill="url(#u)"/><circle cx="1240" cy="130" r="260" fill="#78e4f5" opacity=".22" filter="url(#g)"/><path d="M0 720C350 560 590 960 920 750s450-110 680-280v430H0z" fill="#61c6e2" opacity=".13"/>
+  <g transform="translate(520 175)" fill="none" stroke="#effeff" stroke-linecap="round" stroke-linejoin="round"><path d="M435 116A258 258 0 0 0 121 500" stroke-width="32"/><path d="M80 396v145h145" stroke-width="32"/><path d="M126 501A258 258 0 0 0 441 117" stroke-width="32"/><path d="M480 221V76H335" stroke-width="32"/><circle cx="280" cy="308" r="57" fill="#7bdcf0" stroke="none"/><path d="m280 268 0 80m-40-40h80" stroke-width="20"/></g>
+</svg>

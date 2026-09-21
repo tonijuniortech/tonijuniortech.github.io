@@ -225,6 +225,17 @@ if (!bundle.includes(newest.slug)) {
   if (!bundle.includes(anchor)) throw new Error('Não foi possível localizar a lista de artigos no aplicativo.');
   bundle = bundle.replace(anchor, `${anchor}${runtimePost},`);
 }
+
+const cardStart = bundle.indexOf('function Ir(');
+const cardEnd = bundle.indexOf('function Lr()', cardStart);
+if (cardStart < 0 || cardEnd < 0) throw new Error('Não foi possível localizar os cards de artigos no aplicativo.');
+let cardComponent = bundle.slice(cardStart, cardEnd);
+if (!cardComponent.includes('article-cover')) {
+  cardComponent = cardComponent
+    .replace('className:`app-icon`', 'className:`cover-frame`')
+    .replace('(0,j.jsx)(n,{})', '(0,j.jsx)(`img`,{className:`article-cover`,src:`/img/covers/${e.icon}.svg`,alt:``,loading:`lazy`})');
+  bundle = `${bundle.slice(0, cardStart)}${cardComponent}${bundle.slice(cardEnd)}`;
+}
 fs.writeFileSync(bundlePath, bundle);
 
 const bundleHash = crypto.createHash('sha256').update(bundle).digest('hex').slice(0, 10);
@@ -236,6 +247,9 @@ for (const file of [...Object.keys(pages).map(route => route === '/' ? 'index.ht
   const absolute = path.join(root, file);
   let html = fs.readFileSync(absolute, 'utf8');
   html = html.replace(/\/assets\/index-[^"']+\.js/g, `/assets/${versionedBundleFile}`);
+  if (file !== '404.html' && !html.includes('/assets/card-covers.css')) {
+    html = html.replace(/(<link rel="stylesheet" crossorigin href="\/assets\/index-[^"]+\.css">)/, '$1\n    <link rel="stylesheet" href="/assets/card-covers.css">');
+  }
   fs.writeFileSync(absolute, html);
 }
 
