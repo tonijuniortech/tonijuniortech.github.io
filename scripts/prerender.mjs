@@ -7,6 +7,20 @@ const site = 'https://tonijuniortec.com.br';
 
 const articles = [
   {
+    slug: 'homepod-mini-2-vazamento-cores',
+    title: 'HomePod mini 2 aparece em vazamento com novas cores',
+    description: 'MacRumors relata imagens encontradas em código da Apple. Veja o que o vazamento indica e o que ainda depende de confirmação oficial.',
+    category: 'Notícias', topic: 'HomePod', date: '28 de setembro de 2026', published: '2026-09-28',
+    sections: [
+      ['O que foi encontrado', 'O MacRumors publicou em 25 de setembro uma descoberta atribuída ao colaborador Aaron Perris: imagens em código da Apple com referências ao HomePod mini 2. Segundo o veículo, o material indica a manutenção do formato arredondado da caixa de som e uma atualização da paleta de cores. Trata-se de informação reportada pelo site, ainda não de uma apresentação oficial do produto.'],
+      ['As cores indicadas pelo vazamento', 'A reportagem lista verde, rosa, azul, branco e preto. O azul seria mais claro que o atual. Se a informação se confirmar, a mudança visual ficará concentrada nas opções de acabamento, sem uma reformulação evidente do formato externo.'],
+      ['O que continua sendo expectativa', 'O MacRumors também menciona expectativas de novo chip, suporte à Siri AI e lançamento até o fim de 2026. Essas possibilidades devem ser tratadas separadamente das imagens: o vazamento não equivale a uma ficha técnica definitiva. Preço, disponibilidade no Brasil e calendário oficial continuam sem confirmação nesta notícia.'],
+      ['O que observar antes de decidir pela compra', 'Na avaliação editorial do iToni, a decisão deve considerar mais que a cor. Ao surgir um anúncio oficial, vale conferir quais idiomas a assistente aceita, quais funções estão disponíveis no país de uso e se os recursos desejados exigem outros aparelhos ou assinaturas. Para quem pretende importar, garantia, atendimento e custo total também entram na comparação. Uma função demonstrada em outro mercado não deve ser presumida como disponível no Brasil.'],
+      ['Para quem já tem uma caixa de som', 'O melhor critério é identificar uma necessidade concreta: qualidade de áudio, facilidade de controle ou integração com os dispositivos usados em casa. Se o equipamento atual atende bem, imagens de um sucessor não bastam para justificar a troca. Espere especificações verificáveis e testes independentes antes de comparar gerações. O iToni não testou o aparelho mostrado no vazamento.']
+    ],
+    sources: [['MacRumors — reportagem de Hartley Charlton, com descoberta de Aaron Perris', 'https://www.macrumors.com/2026/09/25/first-look-at-homepod-mini-2/']]
+  },
+  {
     slug: 'ios-27-2-siri-ai-portugues-novos-idiomas',
     title: 'iOS 27.2 leva Siri AI em português a mais usuários',
     description: 'Primeira beta amplia a Siri AI para português, espanhol, francês, japonês e coreano. Veja os requisitos e por que ainda não é indicada para o iPhone principal.',
