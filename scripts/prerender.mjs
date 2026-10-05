@@ -7,6 +7,24 @@ const site = 'https://tonijuniortec.com.br';
 
 const articles = [
   {
+    slug: 'icloud-mail-nove-aliases-email',
+    title: 'iCloud Mail passa a permitir nove aliases, segundo o MacRumors',
+    description: 'Limite ampliado foi observado no iCloud.com, mas o manual da Apple ainda menciona três aliases. Entenda o recurso e como conferir sua conta.',
+    category: 'Notícias', topic: 'iCloud', date: '5 de outubro de 2026', published: '2026-10-05',
+    sections: [
+      ['O que foi observado no iCloud.com', 'O MacRumors informou nesta segunda-feira, 5 de outubro, que o iCloud Mail passou a oferecer até nove aliases de e-mail, em vez de três. A reportagem de Tim Hardwick afirma ter confirmado a mudança no iCloud.com depois de relatos de usuários. A Apple ainda não anunciou publicamente a ampliação, segundo o veículo. Por isso, o número observado deve ser tratado como uma mudança reportada, sem presumir que todas as contas já tenham a mesma disponibilidade.'],
+      ['A documentação ainda apresenta outro limite', 'Na consulta feita pelo iToni em 5 de outubro, o Manual de Uso do iCloud em português continuava descrevendo um máximo de três aliases. Essa diferença entre a interface relatada pelo MacRumors e a documentação impede afirmar que o novo limite já esteja formalmente documentado pela Apple. Confira o que a sua conta oferece antes de planejar a criação de novos endereços.'],
+      ['Como conferir a opção na sua conta', 'No navegador, abra icloud.com/mail e entre na sua Conta Apple. Abra o menu acima da lista de caixas e escolha Ajustes. Na área da conta, procure Adicionar alias. Confira a disponibilidade indicada antes de criar um endereço. O manual orienta preencher o alias, a etiqueta e o nome exibido nas mensagens. Se a opção não aparecer ou indicar outro limite, isso não comprova um defeito no iPhone ou no Mac.'],
+      ['Uma forma de organizar os endereços que você divulga', 'Um alias permite enviar e receber mensagens usando um endereço adicional associado ao Mail do iCloud. Ele não cria uma Conta Apple separada. Como exemplo de uso, você pode escolher um endereço fácil de identificar para contatos profissionais e outro para correspondência pessoal. Essa divisão facilita reconhecer qual endereço foi divulgado em cada contexto; não transforma automaticamente o serviço em caixas independentes.'],
+      ['O que avaliar antes de cadastrar um novo endereço', 'Na orientação editorial do iToni, vale pensar no uso de cada endereço antes de criá-lo. Escolha um nome adequado ao contexto e registre onde o utilizou: contatos, serviços e assinaturas podem continuar enviando mensagens para ele por muito tempo. Ao testar um novo alias, envie uma mensagem de um endereço que você já controla e confira também qual remetente aparece na resposta. Esse cuidado simples ajuda a evitar divulgar um endereço sem verificar o funcionamento.'],
+      ['Cuidado ao desativar ou apagar', 'A Apple informa que mensagens destinadas a um alias desativado ou apagado são devolvidas ao remetente. A desativação pode ser revertida; a exclusão é definitiva. Antes de alterar um endereço usado em cadastros, atualize os contatos e os serviços correspondentes. Se ele recebe mensagens de recuperação de acesso, confirme a troca nesses serviços primeiro. A novidade relatada é a quantidade de aliases: ela não deve ser interpretada como aumento do armazenamento do iCloud.']
+    ],
+    sources: [
+      ['MacRumors — Tim Hardwick: Apple Quietly Triples iCloud Mail Alias Limit to Nine', 'https://www.macrumors.com/2026/10/05/apple-triples-icloud-mail-alias-limit/'],
+      ['Apple Support — Adicione e gerencie aliases de e-mail para iCloud Mail', 'https://support.apple.com/pt-br/guide/icloud/mm6b1a490a/icloud']
+    ]
+  },
+  {
     slug: 'mac-removemacai-apple-intelligence-armazenamento',
     title: 'RemoveMacAI promete liberar espaço no Mac: entenda as limitações',
     description: 'Ferramenta independente remove modelos da Apple Intelligence. Entenda a troca entre armazenamento, recursos de IA e manutenção do macOS.',
