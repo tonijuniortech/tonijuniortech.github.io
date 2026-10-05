@@ -7,6 +7,21 @@ const site = 'https://tonijuniortec.com.br';
 
 const articles = [
   {
+    slug: 'mac-removemacai-apple-intelligence-armazenamento',
+    title: 'RemoveMacAI promete liberar espaço no Mac: entenda as limitações',
+    description: 'Ferramenta independente remove modelos da Apple Intelligence. Entenda a troca entre armazenamento, recursos de IA e manutenção do macOS.',
+    category: 'Notícias', topic: 'Mac', date: '5 de outubro de 2026', published: '2026-10-05',
+    sections: [
+      ['Uma ferramenta para quem prefere espaço livre', 'Segundo reportagem de Tim Hardwick no MacRumors, publicada em 5 de outubro, o projeto de código aberto RemoveMacAI foi criado para remover modelos locais da Apple Intelligence no macOS 27 e impedir novos downloads. O veículo relata uma recuperação aproximada de 10 a 12 GB, variável conforme os modelos instalados. Não se trata de uma ferramenta oficial da Apple nem de um ganho garantido para todos os Macs.'],
+      ['O que muda no uso do computador', 'A recuperação de armazenamento vem acompanhada da perda de recursos de inteligência artificial. A reportagem cita funções de escrita, geração de imagens e recursos de IA da Siri entre as funcionalidades afetadas. Para quem utiliza essas ferramentas no trabalho, liberar espaço pode significar perder parte do fluxo de produtividade. O iToni não testou o utilitário: não podemos confirmar sua segurança, compatibilidade ou comportamento após atualizações.'],
+      ['Por que espaço livre não é o mesmo que desempenho', 'Ter mais capacidade disponível permite guardar documentos e instalar aplicativos, mas não comprova que o computador ficará mais rápido. Antes de adotar qualquer solução, identifique o problema real: falta de armazenamento, lentidão ao abrir programas e consumo de memória são situações diferentes. Uma intervenção voltada aos arquivos de modelos de IA não deve ser apresentada como correção universal para um Mac lento.'],
+      ['O que conferir antes de alterar o sistema', 'A orientação editorial do iToni é começar pela revisão dos próprios arquivos: downloads antigos, vídeos duplicados e aplicativos que não são mais utilizados. Confira o que precisa ser preservado e mantenha uma cópia de segurança verificável antes de remover qualquer conteúdo. Em computadores de trabalho ou escola, consulte o responsável técnico antes de instalar utilitários ou modificar configurações administradas.'],
+      ['Como avaliar uma ferramenta independente', 'Código aberto permite examinar o funcionamento de um projeto, mas não representa uma certificação de segurança. Antes de instalar, verifique a procedência do download, as permissões solicitadas, a documentação da versão e as instruções de reversão. Evite executar comandos copiados de comentários ou conceder acesso administrativo sem compreender o efeito. Se não houver um procedimento claro para desfazer as alterações, a opção prudente é não prosseguir.'],
+      ['Vale a pena usar?', 'Para quem depende das funções de IA, a troca tende a ser pouco atraente. Para quem não as utiliza e enfrenta falta de espaço, a proposta merece acompanhamento, não uma instalação impulsiva. Compare o benefício esperado com alternativas simples de organização e armazenamento externo. Esta notícia informa sobre a existência do projeto; não recomenda sua instalação nem oferece comandos de remoção. Novas versões do macOS podem exigir uma nova análise de compatibilidade.']
+    ],
+    sources: [['MacRumors — Tim Hardwick: Mac Users Reclaim Storage With New Apple Intelligence Removal Tool', 'https://www.macrumors.com/2026/10/05/apple-intelligence-removal-tool-frees-mac-storage/']]
+  },
+  {
     slug: 'homepod-mini-2-vazamento-cores',
     title: 'HomePod mini 2 aparece em vazamento com novas cores',
     description: 'MacRumors relata imagens encontradas em código da Apple. Veja o que o vazamento indica e o que ainda depende de confirmação oficial.',
