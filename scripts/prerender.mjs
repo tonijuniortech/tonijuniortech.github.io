@@ -7,6 +7,25 @@ const site = 'https://tonijuniortec.com.br';
 
 const articles = [
   {
+    slug: 'apple-configurator-2-21-atualizacao-mac',
+    title: 'Apple Configurator 2.21 melhora o login com a Conta Apple no Mac',
+    description: 'Atualização traz melhorias de confiabilidade no login e correções de erros. Veja para quem o Configurator é útil e como atualizar pelo Mac.',
+    category: 'Notícias', topic: 'Mac', date: '5 de outubro de 2026', published: '2026-10-05',
+    sections: [
+      ['O que mudou na versão 2.21', 'A Apple disponibilizou o Apple Configurator 2.21 para Mac. As notas da atualização informam uma melhoria de confiabilidade ao iniciar sessão com a Conta Apple, além de correções de erros e melhorias gerais. A versão foi noticiada nesta segunda-feira, 5 de outubro, por Joe Rossignol no MacRumors. O iToni também conferiu a versão e as notas no catálogo público da Apple. Não há uma lista detalhada dos erros corrigidos.'],
+      ['Para que serve o Apple Configurator', 'O aplicativo gratuito da Apple é voltado à configuração de dispositivos, especialmente em escolas e empresas. Sua descrição oficial inclui a instalação de aplicativos e perfis de configuração em aparelhos conectados ao Mac, além de tarefas de atualização e preparação de dispositivos. Para quem administra vários iPhones ou iPads, a ferramenta ajuda a aplicar configurações de maneira consistente.'],
+      ['Quem deve prestar atenção à atualização', 'A mudança no login interessa principalmente a quem já utiliza o Configurator e encontra dificuldades na autenticação. As notas não explicam quais condições causavam as falhas nem garantem a solução de todos os problemas de acesso. Se o aplicativo faz parte da rotina de uma equipe, registre a versão instalada e o comportamento observado antes e depois da atualização. Isso facilita distinguir uma correção efetiva de um problema relacionado à conta ou à conexão.'],
+      ['Como atualizar no Mac', 'Abra a App Store no Mac e confira a área de atualizações ou a página do Apple Configurator. Se a nova versão estiver disponível para o seu computador, use a opção de atualizar. No catálogo consultado pelo iToni, a versão 2.21 exige macOS 15.7 ou posterior. Verifique o requisito exibido na sua App Store e conclua qualquer operação em andamento no aplicativo antes de iniciar a atualização.'],
+      ['Uma conferência simples antes de usar em vários aparelhos', 'Como orientação editorial, recomendamos testar o aplicativo em uma tarefa conhecida antes de retomar uma configuração em lote. Confira se a conta entra normalmente e se o dispositivo de teste é reconhecido. Em uma equipe, mantenha anotados os perfis e os procedimentos utilizados, para que outra pessoa consiga repetir o processo. Não é necessário preparar ou apagar um aparelho apenas para conferir se o aplicativo abre e permite autenticação.'],
+      ['O que essa versão não promete', 'As notas publicadas se concentram em confiabilidade e manutenção. Elas não anunciam novos recursos de instalação, alteração de regras de assinatura de aplicativos ou mudanças em certificados iOS. Para quem usa o iPhone apenas no dia a dia e não administra dispositivos, a notícia não exige nenhuma ação no telefone: a atualização é do aplicativo para Mac.']
+    ],
+    sources: [
+      ['MacRumors — Joe Rossignol: Apple Configurator App Updated', 'https://www.macrumors.com/2026/10/05/apple-configurator-app-updated/'],
+      ['Apple — Apple Configurator na App Store', 'https://apps.apple.com/us/app/apple-configurator/id1037126344'],
+      ['Apple — catálogo público da App Store: versão e notas da atualização', 'https://itunes.apple.com/lookup?id=1037126344&country=us']
+    ]
+  },
+  {
     slug: 'icloud-mail-nove-aliases-email',
     title: 'iCloud Mail passa a permitir nove aliases, segundo o MacRumors',
     description: 'Limite ampliado foi observado no iCloud.com, mas o manual da Apple ainda menciona três aliases. Entenda o recurso e como conferir sua conta.',
