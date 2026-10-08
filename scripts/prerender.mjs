@@ -7,6 +7,25 @@ const site = 'https://tonijuniortec.com.br';
 
 const articles = [
   {
+    slug: 'whatsapp-liquid-glass-player-video',
+    title: 'WhatsApp começa a renovar o player de vídeo com Liquid Glass',
+    description: 'Novo visual aparece de forma gradual. Veja o que muda nos controles e como conferir a atualização sem colocar suas conversas em risco.',
+    category: 'Notícias', topic: 'iPhone', date: '8 de outubro de 2026', published: '2026-10-08',
+    sections: [
+      ['O que foi noticiado', 'O WhatsApp está ampliando o uso do Liquid Glass para o player de vídeo, segundo reportagem de Marcus Mendes no 9to5Mac, publicada em 7 de outubro. A mudança integra os controles de reprodução ao restante da interface renovada. Não significa que todos os usuários já receberam o novo visual.'],
+      ['Como reconhecer a mudança', 'O WABetaInfo descreve uma barra de progresso flutuante na parte superior, com transparência e cantos arredondados, além de ajustes nos controles inferiores. A aparência acompanha os modos claro e escuro. A novidade foi observada na beta para iOS 26.39.10.70, disponível para parte dos participantes do TestFlight. Essa numeração identifica a versão do WhatsApp, não uma atualização do sistema do iPhone.'],
+      ['Disponibilidade ainda exige cautela', 'O WABetaInfo também relata a expansão do visual para iPad e Mac. O site informa compatibilidade com a versão recente da App Store, mas não apresenta uma data de disponibilidade geral na versão estável. Portanto, compatibilidade não deve ser confundida com liberação para todas as contas. O iToni não testou essa interface e não pode confirmar sua presença em um aparelho específico.'],
+      ['Como conferir no seu iPhone', 'Nossa orientação é começar pelo aplicativo oficial que você já utiliza. Abra a App Store e confira se há uma atualização do WhatsApp. Depois, escolha um vídeo conhecido em uma conversa e observe os controles ao reproduzi-lo. Verifique se consegue pausar, retomar e avançar normalmente. O objetivo é conferir a experiência real, não apenas procurar uma aparência diferente. Se o visual antigo permanecer, isso, por si só, não indica falha no aparelho.'],
+      ['Não reinstale apenas para mudar o visual', 'Uma alteração estética não justifica apagar o aplicativo ou arriscar o histórico de conversas. Também não recomendamos instalar versões modificadas, perfis desconhecidos ou arquivos enviados por terceiros para tentar antecipar a novidade. Para quem depende do WhatsApp no trabalho, manter uma versão estável e preservar o acesso à conta é mais importante que receber novos controles imediatamente. Participar de testes deve ser uma decisão consciente, não um requisito para continuar assistindo a vídeos.'],
+      ['Um cuidado útil para quem atende clientes', 'Como sugestão editorial do iToni, antes de gravar um tutorial ou orientar um cliente, confira a tela que ele realmente vê. Pessoas com interfaces diferentes podem procurar o mesmo controle em posições distintas. Prefira instruções pela função, como pausar ou avançar, em vez de depender exclusivamente da cor ou do formato de um botão. Se precisar comparar comportamentos, use um vídeo sem informações pessoais e não compartilhe capturas que exponham nomes, telefones ou mensagens.'],
+      ['O que essa notícia não promete', 'As fontes consultadas tratam da interface do player. Não há base nessa informação para prometer melhora na qualidade dos vídeos, redução do consumo de internet ou novos recursos de privacidade. Se um vídeo não carregar, separe esse problema da mudança visual: confira a conexão e se outros vídeos funcionam antes de atribuir a falha ao design. Por enquanto, o ponto central é a renovação gradual dos controles, e não uma transformação no serviço de mensagens.']
+    ],
+    sources: [
+      ['9to5Mac — Marcus Mendes: WhatsApp expands the Liquid Glass design to its video player', 'https://9to5mac.com/2026/10/07/whatsapp-expands-the-liquid-glass-design-to-its-video-player/'],
+      ['WABetaInfo — relato da liberação e versão de teste', 'https://wabetainfo.com/whatsapp-is-rolling-out-liquid-glass-design-for-the-video-player/']
+    ]
+  },
+  {
     slug: 'apple-configurator-2-21-atualizacao-mac',
     title: 'Apple Configurator 2.21 melhora o login com a Conta Apple no Mac',
     description: 'Atualização traz melhorias de confiabilidade no login e correções de erros. Veja para quem o Configurator é útil e como atualizar pelo Mac.',
