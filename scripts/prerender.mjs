@@ -7,6 +7,25 @@ const site = 'https://tonijuniortec.com.br';
 
 const articles = [
   {
+    slug: 'apple-homeview-tela-casa-inteligente',
+    title: 'Apple apresenta HomeView: o que avaliar antes de levar a tela para casa',
+    description: 'Tela de 7 polegadas reúne Siri AI e controle da casa. Conheça o anúncio e os cuidados com instalação, compatibilidade e uso compartilhado.',
+    category: 'Notícias', topic: 'Apple', date: '14 de outubro de 2026', published: '2026-10-14',
+    sections: [
+      ['Um novo ponto de controle para a casa', 'A Apple anunciou o HomeView em 13 de outubro. O dispositivo reúne uma tela Liquid Retina de 7 polegadas, Siri AI, entretenimento e controles de casa inteligente. O comunicado oficial apresenta opções para mesa e parede. A proposta é oferecer acesso compartilhado a funções domésticas sem depender exclusivamente do telefone de uma pessoa.'],
+      ['Preço e calendário anunciados', 'Segundo a cobertura de Chance Miller no 9to5Mac, a pré-venda começou com preço de US$ 299 e a disponibilidade está prevista para 13 de novembro. Esses valores não devem ser tratados como preço brasileiro. Antes de planejar uma compra no Brasil, confira a oferta oficial local, condições de garantia, impostos e disponibilidade dos recursos na sua região. O iToni não testou o produto.'],
+      ['O que a Apple informa sobre os recursos', 'O comunicado descreve reconhecimento de até seis pessoas e uma interface que muda conforme a distância do usuário. Há FaceTime com câmera Center Stage e integração com acessórios compatíveis com Apple Home e Matter. O uso de contexto pessoal pela Siri AI requer um iPhone ou iPad compatível com Apple Intelligence. Essas condições importam: ter a tela não significa receber todas as funções independentemente dos outros aparelhos.'],
+      ['Mesa ou parede: comece pelo local de uso', 'Nossa orientação editorial é escolher primeiro a tarefa que a tela vai cumprir. Para consultar receitas, o ponto de instalação precisa ficar visível sem atrapalhar o preparo dos alimentos. Para controlar a entrada, vale avaliar alcance, iluminação e circulação de pessoas. Uma tela fixa é menos flexível que um aparelho levado de um cômodo para outro. Antes de furar a parede, confira alimentação elétrica, suporte adequado e instruções do fabricante; intervenções elétricas devem ser avaliadas por profissional qualificado.'],
+      ['Faça um inventário dos acessórios existentes', 'Como preparação prática, anote os modelos das lâmpadas, câmeras e demais equipamentos que pretende controlar. Confira a compatibilidade de cada modelo, e não apenas a marca. Registre também se o acessório depende de uma central própria, aplicativo, conta ou assinatura. Esse levantamento evita comprar uma tela esperando resolver limitações de integração que pertencem aos acessórios. Se houver dúvida, mantenha o controle atual funcionando até validar o novo conjunto.'],
+      ['Uma tela compartilhada exige planejamento de privacidade', 'A recomendação do iToni é definir quem poderá usar o equipamento e quais informações devem aparecer em áreas comuns. Agenda, mensagens e câmeras merecem atenção diferente de música ou previsão do tempo. Revise as opções disponíveis durante a configuração e faça uma conferência com os moradores. Não presuma que um recurso de identificação substitui a revisão das permissões. Evite instalar uma câmera voltada a espaços privados sem combinar previamente seu uso com as pessoas envolvidas.'],
+      ['Quando a compra pode fazer sentido', 'Como análise editorial, uma tela dedicada pode ser útil quando várias pessoas precisam consultar ou controlar as mesmas funções ao longo do dia. Se a necessidade principal já é atendida pelo iPhone ou por outro equipamento, vale esperar avaliações independentes e comparar o benefício real. Monte uma lista com três tarefas concretas que pretende simplificar e verifique os requisitos de cada uma. Essa comparação é mais útil que decidir apenas pelo anúncio ou pelo tamanho da tela.']
+    ],
+    sources: [
+      ['Apple Newsroom — anúncio oficial do HomeView', 'https://www.apple.com/newsroom/2026/10/meet-apple-homeview-a-new-way-to-enjoy-entertainment-and-manage-the-home/'],
+      ['9to5Mac — Chance Miller: recursos, preço e disponibilidade do HomeView', 'https://9to5mac.com/2026/10/13/apple-homeview-announced-features-price-release-date/']
+    ]
+  },
+  {
     slug: 'whatsapp-liquid-glass-player-video',
     title: 'WhatsApp começa a renovar o player de vídeo com Liquid Glass',
     description: 'Novo visual aparece de forma gradual. Veja o que muda nos controles e como conferir a atualização sem colocar suas conversas em risco.',
