@@ -7,6 +7,24 @@ const site = 'https://tonijuniortec.com.br';
 
 const articles = [
   {
+    slug: 'ipad-mini-8-smart-folio-a3632-indicio',
+    title: 'iPad mini 8 ganha novo indício em página da Apple: entenda o que apareceu',
+    description: 'Smart Folio inédito com código A3632 surgiu em uma página regulatória da Apple. Veja o que esse registro indica e o que ainda não foi confirmado.',
+    category: 'Notícias', topic: 'iPad', date: '16 de outubro de 2026', published: '2026-10-16',
+    sections: [
+      ['O novo indício encontrado no site da Apple', 'Uma página regulatória francesa da Apple passou a listar um Smart Folio para iPad mini com o número de modelo A3632, segundo reportagem de Juli Clover no MacRumors. O código não corresponde aos estojos atuais ou anteriores citados pelo veículo. A presença de um acessório ainda não anunciado em uma área oficial é um indício relevante, mas não equivale à apresentação de um novo iPad.'],
+      ['Por que um Smart Folio diferente chama atenção', 'O iPad mini de sexta geração e o modelo seguinte utilizam o mesmo Smart Folio, lançado em 2021. Um novo código pode indicar alguma mudança física no aparelho ao qual o acessório será destinado. Dimensões, posição de ímãs, câmeras ou botões podem afetar o encaixe mesmo quando a aparência geral permanece parecida. A listagem, porém, não explica qual dessas partes teria mudado.'],
+      ['O registro não confirma as especificações', 'A página mencionada não informa o nome iPad mini 8, tamanho da tela, processador, câmeras, preço ou data de lançamento. Também não permite concluir sozinho que os estojos atuais serão incompatíveis. Até a Apple publicar a página do produto e a lista oficial de compatibilidade, qualquer associação entre o Smart Folio A3632 e uma geração específica deve ser tratada como interpretação, não como especificação confirmada.'],
+      ['OLED e resistência à água continuam no campo dos rumores', 'A cobertura do MacRumors relaciona o acessório a rumores de uma futura tela OLED e de um projeto com maior resistência à água. Essas informações não aparecem no registro do Smart Folio. São expectativas atribuídas a reportagens anteriores e precisam ser separadas do fato observado agora. O iToni não teve acesso ao produto e não realizou testes de tela, estrutura ou proteção contra líquidos.'],
+      ['Não compre um estojo antecipadamente', 'Nossa orientação é aguardar o anúncio oficial antes de comprar capa, película ou suporte para um aparelho ainda não apresentado. Mesmo produtos com medidas próximas podem ter diferenças suficientes para prejudicar o fechamento, a fixação magnética ou o acesso aos controles. Quando o novo modelo chegar, confira na embalagem e na página do fabricante a identificação exata dos dispositivos compatíveis.'],
+      ['Quem já possui um iPad mini precisa trocar?', 'Esse registro não torna os modelos atuais obsoletos. Se o seu iPad mini continua atendendo às tarefas necessárias, não existe motivo técnico para substituí-lo apenas por causa de um acessório listado antecipadamente. Uma decisão de troca deve considerar desempenho, bateria, armazenamento, suporte de software e recursos realmente anunciados. Compare essas necessidades com o produto oficial quando ele estiver disponível.'],
+      ['Como acompanhar a confirmação corretamente', 'Considere confirmadas somente as informações publicadas pela Apple na página do produto, no comunicado oficial ou na documentação de suporte. Depois do anúncio, verifique o número do modelo, a lista de acessórios compatíveis e a disponibilidade no Brasil. Vazamentos e registros antecipados ajudam a acompanhar o mercado, mas não substituem os dados finais necessários para uma compra segura.']
+    ],
+    sources: [
+      ['MacRumors — Juli Clover: Apple website reference hints at iPad mini 8', 'https://www.macrumors.com/2026/10/15/apple-ipad-mini-8-website-reference/']
+    ]
+  },
+  {
     slug: 'apple-homeview-tela-casa-inteligente',
     title: 'Apple apresenta HomeView: o que avaliar antes de levar a tela para casa',
     description: 'Tela de 7 polegadas reúne Siri AI e controle da casa. Conheça o anúncio e os cuidados com instalação, compatibilidade e uso compartilhado.',
