@@ -7,6 +7,27 @@ const site = 'https://tonijuniortec.com.br';
 
 const articles = [
   {
+    slug: 'ios-27-2-release-candidate-o-que-muda',
+    title: 'Apple libera iOS 27.2 RC: veja o que muda antes da versão final',
+    description: 'Versão candidata do iOS 27.2 amplia a Siri AI para português e traz ajustes em aplicativos. Entenda o que já foi confirmado e quem deve instalar.',
+    category: 'Notícias', topic: 'iOS', date: '19 de outubro de 2026', published: '2026-10-19',
+    sections: [
+      ['O iOS 27.2 chegou à etapa Release Candidate', 'A Apple disponibilizou em 19 de outubro o iOS 27.2 Release Candidate para desenvolvedores, com a compilação 24B115. A empresa também liberou o iPadOS 27.2 RC. Release Candidate, ou RC, é a versão candidata a se tornar a atualização pública caso não apareça um problema importante nos testes finais. Isso representa uma etapa avançada, mas não transforma o sistema em versão estável para todos os usuários.'],
+      ['Siri AI ganha suporte a português e outros idiomas', 'Segundo a cobertura de Juli Clover no MacRumors, o iOS 27.2 amplia a Siri AI para português, espanhol, francês, japonês e coreano. A disponibilidade real ainda depende de aparelho compatível, idioma, região e demais requisitos da Apple Intelligence. Ter o iOS 27.2 instalado não garante sozinho o acesso a todos os recursos. O ideal é conferir as condições exibidas pela Apple para o seu modelo antes de contar com a novidade.'],
+      ['Outras mudanças observadas durante os testes', 'A versão 27.2 também foi usada para testar perfis no aplicativo Apple TV, alertas de aniversário no recurso Call Context e um novo ícone do Apple Music. Para usuários da União Europeia, as notas oficiais registram uma interface alternativa e ampliada para a solicitação de permissão do App Tracking Transparency. Alguns desses ajustes podem depender de região, conta ou serviço, portanto a experiência não será necessariamente igual em todos os aparelhos.'],
+      ['O novo aplicativo Saúde não está incluído no RC', 'As notas oficiais da Apple informam que o aplicativo Saúde redesenhado, presente em uma beta anterior apenas para testes, foi retirado desta versão. A empresa diz que ele voltará em uma futura beta. Os dados criados durante o teste anterior permanecem no dispositivo e podem ser consultados pelos Ajustes. A documentação também registra que resumos personalizados podem não ser gerados como esperado na aba Insights.'],
+      ['Ainda existem problemas conhecidos', 'A documentação do iOS e iPadOS 27.2 RC cita outras limitações. O recurso de descrever um atalho pode falhar com uma mensagem de erro, e há ocorrências técnicas relacionadas a Nearby Interaction, simuladores e testes do StoreKit. Parte desses itens interessa principalmente a desenvolvedores, mas sua presença reforça que RC não significa ausência completa de falhas.'],
+      ['Usuário comum deve instalar agora?', 'Nossa recomendação é aguardar a distribuição pública do iOS 27.2. A versão RC é destinada à validação e pode afetar aplicativos, bateria, acessórios ou serviços necessários no dia a dia. Quem depende do iPhone para trabalho, banco, autenticação ou saúde não deve instalar uma versão de teste apenas para antecipar novidades. Desenvolvedores que precisem validar aplicativos devem usar um aparelho secundário, com backup recente e sem dados indispensáveis.'],
+      ['Como se preparar para a atualização pública', 'Antes da versão final, confira se há espaço livre, atualize os aplicativos e faça um backup verificável no iCloud ou no computador. Quando o iOS 27.2 aparecer em Ajustes, Geral e Atualização de Software, leia as informações apresentadas para o seu aparelho. Use Wi-Fi estável, mantenha o iPhone conectado à energia e evite iniciar a instalação quando precisar do dispositivo imediatamente.'],
+      ['Quando a versão final deve chegar', 'O MacRumors estima que a distribuição pública possa ocorrer na próxima semana, mas a Apple não informou no material consultado uma data exata. A empresa ainda pode substituir o RC por uma nova compilação se encontrar um problema relevante. A confirmação deve ser considerada oficial somente quando a atualização aparecer no canal público e a Apple divulgar suas informações finais.']
+    ],
+    sources: [
+      ['Apple Developer — iOS 27.2 RC, compilação 24B115', 'https://developer.apple.com/news/releases/'],
+      ['Apple Developer — notas oficiais do iOS e iPadOS 27.2 RC', 'https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-27_2-release-notes'],
+      ['MacRumors — Juli Clover: Apple releases iOS 27.2 Release Candidate', 'https://www.macrumors.com/2026/10/19/apple-releases-ios-27-2-rc/']
+    ]
+  },
+  {
     slug: 'ipad-mini-8-smart-folio-a3632-indicio',
     title: 'iPad mini 8 ganha novo indício em página da Apple: entenda o que apareceu',
     description: 'Smart Folio inédito com código A3632 surgiu em uma página regulatória da Apple. Veja o que esse registro indica e o que ainda não foi confirmado.',
