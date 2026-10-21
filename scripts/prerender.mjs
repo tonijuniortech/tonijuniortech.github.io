@@ -7,6 +7,25 @@ const site = 'https://tonijuniortec.com.br';
 
 const articles = [
   {
+    slug: 'iphone-duo-apple-pencil-ios-27-2',
+    title: 'iPhone Duo receberá suporte ao Apple Pencil com o iOS 27.2',
+    description: 'Compatibilidade deverá chegar na próxima semana e será limitada ao Apple Pencil USB-C. Entenda os requisitos e os cuidados antes de comprar o acessório.',
+    category: 'Notícias', topic: 'iPhone', date: '21 de outubro de 2026', published: '2026-10-21',
+    sections: [
+      ['Suporte ao Apple Pencil está previsto no iOS 27.2', 'O iPhone Duo deverá receber suporte ao Apple Pencil com a versão pública do iOS 27.2, segundo reportagem de Ryan Christoffel no 9to5Mac. Quando apresentou o aparelho em setembro, a Apple informou apenas que a compatibilidade chegaria mais tarde em 2026. A descoberta de que o recurso já funciona na versão Release Candidate indica que a espera poderá ser menor que a prevista inicialmente.'],
+      ['O que já foi observado na versão candidata', 'A reportagem cita uma demonstração publicada por Max Weinbach, que afirma ter usado o Apple Pencil no iPhone Duo com o iOS 27.2 RC. Release Candidate é uma compilação avançada e pode se tornar a versão pública se não for encontrado um problema importante. Ainda assim, uma demonstração em software de teste não substitui a confirmação final da Apple nem garante que a distribuição ocorrerá exatamente na data estimada.'],
+      ['Somente o modelo USB-C será compatível', 'O detalhe mais importante para quem pretende usar o recurso é a compatibilidade limitada ao Apple Pencil USB-C. De acordo com o 9to5Mac, o Apple Pencil Pro e os modelos tradicionais não funcionarão com o iPhone Duo. Portanto, não compre o acessório apenas porque já possui outro Apple Pencil: confira o nome completo do modelo, a conexão USB-C e a lista oficial de dispositivos compatíveis apresentada pela Apple.'],
+      ['Para que o acessório pode ser útil no iPhone', 'Em uma tela dobrável, uma caneta pode facilitar anotações, marcações em documentos, assinaturas e desenhos rápidos. A utilidade real dependerá dos aplicativos adotarem corretamente a entrada pelo Apple Pencil e do modo como o iOS administra a tela do Duo. Sensibilidade, gestos, latência e recursos disponíveis não devem ser presumidos a partir da experiência no iPad até que a Apple publique a documentação completa.'],
+      ['Quem estiver no iOS 27.2 RC pode receber antes', 'Usuários que já executam a versão RC poderão encontrar o suporte disponível quando o iPhone Duo começar a chegar aos compradores, conforme o teste citado pela fonte. Isso não significa que o iToni recomende instalar uma versão de desenvolvimento apenas para antecipar a função. Sistemas de teste podem afetar bateria, aplicativos bancários, acessórios e estabilidade, especialmente em um aparelho novo.'],
+      ['Quando a atualização pública deve chegar', 'O 9to5Mac estima que o iOS 27.2 seja lançado por volta de segunda-feira, 26 de outubro. Essa previsão pode mudar se a Apple identificar falhas ou decidir liberar outra compilação candidata. Considere a disponibilidade confirmada somente quando a atualização aparecer em Ajustes, Geral e Atualização de Software ou quando a Apple publicar suas notas finais.'],
+      ['O que conferir antes de comprar o Apple Pencil', 'A orientação do iToni é esperar a página oficial de compatibilidade ser atualizada. Confirme o modelo exato do iPhone, a geração do Apple Pencil, os recursos oferecidos e o preço praticado no Brasil. Se comprar de terceiros, verifique procedência, garantia e política de devolução. Um acessório visualmente parecido pode não oferecer a mesma compatibilidade ou segurança.'],
+      ['Como se preparar para o iOS 27.2', 'Antes da atualização, faça um backup verificável no iCloud ou no computador, mantenha espaço livre e atualize os aplicativos essenciais. Instale a versão pública usando Wi-Fi estável e o aparelho conectado à energia. Depois, teste o Apple Pencil em um aplicativo simples antes de usá-lo em trabalho importante. O iToni atualizará esta notícia caso a Apple altere a data ou os requisitos de compatibilidade.']
+    ],
+    sources: [
+      ['9to5Mac — Ryan Christoffel: iPhone Duo adding Apple Pencil support next week with iOS 27.2', 'https://9to5mac.com/2026/10/21/iphone-duo-adding-apple-pencil-support-next-week-with-ios-27-2/']
+    ]
+  },
+  {
     slug: 'ios-27-deteccao-risco-personificacao-golpes',
     title: 'iOS 27 ajuda a identificar golpes no iPhone: veja como ativar',
     description: 'Detecção de Risco de Personificação analisa sinais de engenharia social no próprio aparelho. Entenda como funciona, as limitações e como ativar com segurança.',
@@ -415,5 +434,16 @@ for (const file of [...Object.keys(pages).map(route => route === '/' ? 'index.ht
   }
   fs.writeFileSync(absolute, html);
 }
+
+const sitemapPath = path.join(root, 'sitemap.xml');
+let sitemap = fs.readFileSync(sitemapPath, 'utf8');
+for (const article of [...articles].reverse()) {
+  const loc = `${site}/artigos/${article.slug}/`;
+  if (!sitemap.includes(`<loc>${loc}</loc>`)) {
+    sitemap = sitemap.replace('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">', `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url><loc>${loc}</loc><lastmod>${article.published}</lastmod><priority>0.8</priority></url>`);
+  }
+}
+sitemap = sitemap.replace(/(<loc>https:\/\/tonijuniortec\.com\.br\/noticias\/<\/loc><lastmod>)[^<]+/, `$1${newest.published}`);
+fs.writeFileSync(sitemapPath, sitemap);
 
 console.log(`Pré-renderização concluída para ${Object.keys(pages).length} páginas.`);
